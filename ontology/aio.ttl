@@ -1,7 +1,6 @@
-@prefix : <http://bimerr.iot.linkeddata.es/def/annotated-information#> .
-@prefix dc: <http://purl.org/dc/elements/1.1> .
-@prefix aio: <http://bimerr.iot.linkeddata.es/def/annotated-information#> .
-@prefix kpi: <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+@prefix : <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix aio: <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -10,931 +9,210 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix building: <http://bimerr.iot.linkeddata.es/def/building#> .
-@base <http://bimerr.iot.linkeddata.es/def/annotated-information#> .
+@base <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> .
 
-<http://bimerr.iot.linkeddata.es/def/annotated-information#> rdf:type owl:Ontology ;
-                                                              <http://purl.org/dc/elements/1.1/created> "2020-04-01" ;
-                                                              <http://purl.org/dc/elements/1.1/creator> "María Póveda Villalón" ,
-                                                                                                        "Serge Chávez Feria" ;
-                                                              <http://purl.org/dc/elements/1.1/title> "Annotated Information Objects ontology"@en ,
-                                                                                                      "Th Annotated Information Objects Ontology aims to represent annotations with respect to files or complementary information related to a construction projects needed to be transfered between building stakeholders."@en ;
-                                                              dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                                              owl:versionInfo "0.0.2" .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> rdf:type owl:Ontology ;
+                                                                      dc:creator "María Poveda-Villalón" ,
+                                                                                 "Serge Chávez-Feria" ;
+                                                                      dc:title "Annotated Information Objects Ontology"@en ;
+                                                                      rdfs:comment "The Annotated Information Objects ontology aims to represent information objects like images or text annotations describing different aspects of the building elements. The main purpose of the ontology is to support the report of issues or comments with respect to the building elements during the auditing or construction phases of the renovation activities. The ontology take the Building Collaboration Format (BCF) as basis, that is a BuildingSmart Standard that allows the exchange of additional information with respect to the BIM model."@en ;
+                                                                      owl:versionInfo "0.0.2" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/created
-<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+dc:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
+dc:title rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasBimSnippet
-aio:hasBimSnippet rdf:type owl:ObjectProperty ;
-                  rdfs:label "has bim snippet"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasAnnotation
+aio:hasAnnotation rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relates a building element with an annotation."@en ;
+                  rdfs:label "has annotation" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasBitmap
-aio:hasBitmap rdf:type owl:ObjectProperty ;
-              rdfs:label "has bitmap"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasClippingPlane
-aio:hasClippingPlane rdf:type owl:ObjectProperty ;
-                     rdfs:label "has clipping plane"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasComment
-aio:hasComment rdf:type owl:ObjectProperty ;
-               rdfs:label "has comment"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasComponent
-aio:hasComponent rdf:type owl:ObjectProperty ;
-                 rdfs:label "has component"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasComponentSelection
-aio:hasComponentSelection rdf:type owl:ObjectProperty ,
-                                   owl:FunctionalProperty ;
-                          rdfs:label "has component selection"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasDirection
-aio:hasDirection rdf:type owl:ObjectProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "has direction"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasDocument
-aio:hasDocument rdf:type owl:ObjectProperty ;
-                rdfs:label "has document"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasFile
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasFile
 aio:hasFile rdf:type owl:ObjectProperty ;
-            rdfs:label "has file"@en .
+            rdfs:comment "Relates an annotation with the files generated during the process of reporting and issue or making a comment."@en ;
+            rdfs:label "has file" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasFormat
-aio:hasFormat rdf:type owl:ObjectProperty ;
-              rdfs:label "has format"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasStatus
+aio:hasStatus rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relates an annotation with an specific status."@en ;
+              rdfs:label "has status" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasLine
-aio:hasLine rdf:type owl:ObjectProperty ;
-            rdfs:label "has line"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasLocation
-aio:hasLocation rdf:type owl:ObjectProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:label "has location"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasPoint
-aio:hasPoint rdf:type owl:ObjectProperty ;
-             rdfs:label "has point"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasStage
-aio:hasStage rdf:type owl:ObjectProperty ;
-             rdfs:label "has stage"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasTopic
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasTopic
 aio:hasTopic rdf:type owl:ObjectProperty ;
-             rdfs:label "has topic"@en .
+             rdfs:comment "Related an annotation with an specific topic."@en ;
+             rdfs:label "has topic" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasViewSetupHints
-aio:hasViewSetupHints rdf:type owl:ObjectProperty ;
-                      rdfs:label "has view setup hints"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#hasViewpoint
-aio:hasViewpoint rdf:type owl:ObjectProperty ;
-                 rdfs:label "has viewpoint"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#normalVector
-aio:normalVector rdf:type owl:ObjectProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "normal vector"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#relatedToProject
-aio:relatedToProject rdf:type owl:ObjectProperty ;
-                     rdfs:label "related to project"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#relatedToTopic
-aio:relatedToTopic rdf:type owl:ObjectProperty ;
-                   rdfs:label "related to topic"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#topicLabel
-aio:topicLabel rdf:type owl:ObjectProperty ;
-               rdfs:label "topic label"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#topicStatus
-aio:topicStatus rdf:type owl:ObjectProperty ;
-                rdfs:label "topic status"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#topicType
-aio:topicType rdf:type owl:ObjectProperty ;
-              rdfs:label "topic type"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#underViewpoint
-aio:underViewpoint rdf:type owl:ObjectProperty ;
-                   rdfs:label "under viewpoint"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#upVector
-aio:upVector rdf:type owl:ObjectProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:label "up vector"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#relatedToAnnotation
+aio:relatedToAnnotation rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Relationship that allows the referencing of other annotations."@en ;
+                        rdfs:label "related to annotation" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#assignedTo
-aio:assignedTo rdf:type owl:DatatypeProperty ;
-               rdfs:label "assigned to"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationAuthor
+aio:creationAuthor rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Used to indicate the creator of the annotation."@en ;
+                   rdfs:label "creation author" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#color
-aio:color rdf:type owl:DatatypeProperty ,
-                   owl:FunctionalProperty ;
-          rdfs:label "color"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationDate
+aio:creationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "Used to indicate the date the annotation was created."@en ;
+                 rdfs:label "creation date" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#comment
-aio:comment rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:label "comment"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#filename
+aio:filename rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Path of the file in the system."@en ;
+             rdfs:label "filename" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#creationAuthor
-aio:creationAuthor rdf:type owl:DatatypeProperty ,
-                            owl:FunctionalProperty ;
-                   rdfs:label "creation author"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationAuthor
+aio:modificationAuthor rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:comment "Used to indicate the last modificator of the annotation."@en ;
+                       rdfs:label "modification author" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#creationDate
-aio:creationDate rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "creation date"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#defaultVisibility
-aio:defaultVisibility rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:label "default visibility"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#description
-aio:description rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:label "description"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#dueDate
-aio:dueDate rdf:type owl:DatatypeProperty ;
-            rdfs:label "due date"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#height
-aio:height rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:label "height"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ifcSpatialStructureElement
-aio:ifcSpatialStructureElement rdf:type owl:DatatypeProperty ,
-                                        owl:FunctionalProperty ;
-                               rdfs:label "ifc spatial structute element"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#index
-aio:index rdf:type owl:DatatypeProperty ,
-                   owl:FunctionalProperty ;
-          rdfs:label "index"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#modifiedAuthor
-aio:modifiedAuthor rdf:type owl:DatatypeProperty ,
-                            owl:FunctionalProperty ;
-                   rdfs:label "modified author"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#modifiedDate
-aio:modifiedDate rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "modified date"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#name
-aio:name rdf:type owl:DatatypeProperty ;
-         rdfs:label "name"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#openingsVisible
-aio:openingsVisible rdf:type owl:DatatypeProperty ;
-                    rdfs:label "openings visible"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#priority
-aio:priority rdf:type owl:DatatypeProperty ;
-             rdfs:label "priority"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#reference
-aio:reference rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:label "reference"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#referenceScheme
-aio:referenceScheme rdf:type owl:DatatypeProperty ,
-                             owl:FunctionalProperty ;
-                    rdfs:label "reference scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#snapshotName
-aio:snapshotName rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "snapshot name"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#spaceBoundariesVisible
-aio:spaceBoundariesVisible rdf:type owl:DatatypeProperty ;
-                           rdfs:label "space boundaries visible"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#spacesVisible
-aio:spacesVisible rdf:type owl:DatatypeProperty ;
-                  rdfs:label "spaces visible"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#title
-aio:title rdf:type owl:DatatypeProperty ;
-          rdfs:label "title"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#viewpointName
-aio:viewpointName rdf:type owl:DatatypeProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:label "viewpoint name"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#xCoordinate
-aio:xCoordinate rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:label "x coordinate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#yCoordinate
-aio:yCoordinate rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:label "y coordinate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#zCoordinate
-aio:zCoordinate rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:label "z coordinate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#autoringToolId
-building:autoringToolId rdf:type owl:DatatypeProperty ,
-                                 owl:FunctionalProperty ;
-                        rdfs:label "autoring tool id"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ifcGuid
-building:ifcGuid rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:label "building:ifcGuid"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#originatingSystem
-building:originatingSystem rdf:type owl:DatatypeProperty ,
-                                    owl:FunctionalProperty ;
-                           rdfs:label "originating system"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#filename
-kpi:filename rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:label "file name"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#ifcGuid
-kpi:ifcGuid rdf:type owl:DatatypeProperty ;
-            rdfs:label "kpi:ifcGuid"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationDate
+aio:modificationDate rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:dateTime ;
+                     rdfs:comment "Used to indicate the date the annotation was modified."@en ;
+                     rdfs:label "modification date" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#BimFormat
-aio:BimFormat rdf:type owl:Class ;
-              rdfs:subClassOf aio:Format ;
-              rdfs:comment "Concept that describes BIM file formats"@en ;
-              rdfs:label "Bim format"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation
+aio:Annotation rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty aio:hasFile ;
+                                 owl:allValuesFrom aio:File
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty aio:hasStatus ;
+                                 owl:allValuesFrom aio:Status
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty aio:hasTopic ;
+                                 owl:allValuesFrom aio:Topic
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty aio:relatedToAnnotation ;
+                                 owl:allValuesFrom aio:Annotation
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty aio:creationDate ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty aio:modificationDate ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ;
+               rdfs:comment "Annotations made with respect to a building element. This annotations could include text or images."@en ;
+               rdfs:label "Annotation" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Bitmap
-aio:Bitmap rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:hasLocation ;
-                             owl:someValuesFrom aio:Coordinate3D
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:normalVector ;
-                             owl:someValuesFrom aio:Coordinate3D
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:upVector ;
-                             owl:someValuesFrom aio:Coordinate3D
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:hasFormat ;
-                             owl:allValuesFrom aio:BitmapFormat
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:height ;
-                             owl:someValuesFrom xsd:float
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:reference ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
-           rdfs:comment "A list of bitmaps can be used to add more information, for example, text in the visualization."@en ;
-           rdfs:label "Bitmap"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#BitmapFormat
-aio:BitmapFormat rdf:type owl:Class ;
-                 rdfs:subClassOf aio:Format ;
-                 rdfs:comment "Concept that describe Bitmap file formats."@en ;
-                 rdfs:label "Bitmap format"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ClippingPlane
-aio:ClippingPlane rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty aio:hasDirection ;
-                                    owl:someValuesFrom aio:Coordinate3D
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty aio:hasLocation ;
-                                    owl:someValuesFrom aio:Coordinate3D
-                                  ] ;
-                  rdfs:comment "ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en ;
-                  rdfs:label "Clipping plane"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Comment
-aio:Comment rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty aio:underViewpoint ;
-                              owl:allValuesFrom aio:Viewpoint
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty aio:comment ;
-                              owl:someValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty aio:creationAuthor ;
-                              owl:someValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty aio:creationDate ;
-                              owl:someValuesFrom xsd:dateTime
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty aio:modifiedAuthor ;
-                              owl:allValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty aio:modifiedDate ;
-                              owl:allValuesFrom xsd:dateTime
-                            ] .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ComponentSelection
-aio:ComponentSelection rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty aio:hasComponent ;
-                                         owl:someValuesFrom building:Component
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty aio:color ;
-                                         owl:allValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty aio:defaultVisibility ;
-                                         owl:allValuesFrom xsd:boolean
-                                       ] ;
-                       rdfs:comment "The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint."@en ;
-                       rdfs:label "Component selection"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Concept
-aio:Concept rdf:type owl:Class ;
-            rdfs:label "Concept"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ConceptScheme
-aio:ConceptScheme rdf:type owl:Class ;
-                  rdfs:label "Concept scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Coordinate3D
-aio:Coordinate3D rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty aio:xCoordinate ;
-                                   owl:someValuesFrom xsd:float
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty aio:yCoordinate ;
-                                   owl:someValuesFrom xsd:float
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty aio:zCoordinate ;
-                                   owl:someValuesFrom xsd:float
-                                 ] ;
-                 rdfs:comment "A 3 dimensional point."@en ;
-                 rdfs:label "Coordinate 3D"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#DocumentReference
-aio:DocumentReference rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                        owl:onProperty aio:reference ;
-                                        owl:someValuesFrom xsd:string
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty aio:description ;
-                                        owl:allValuesFrom xsd:string
-                                      ] ;
-                      rdfs:comment "Provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location."@en ;
-                      rdfs:label "Document reference"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#File
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#File
 aio:File rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty aio:hasFormat ;
-                           owl:allValuesFrom aio:BimFormat
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty aio:ifcSpatialStructureElement ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty aio:modifiedDate ;
-                           owl:someValuesFrom xsd:dateTime
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty aio:reference ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty aio:referenceScheme ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty kpi:filename ;
-                           owl:someValuesFrom xsd:string
+                           owl:onProperty aio:filename ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
                          ] ;
-         rdfs:comment "Information node about a specific IFC file related to the topic."@en ;
-         rdfs:label "File"@en .
+         rdfs:comment "Class that represents the file attached to the annotation, this file can be an image or text."@en ;
+         rdfs:label "File" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Format
-aio:Format rdf:type owl:Class ;
-           rdfs:label "Format"@en .
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status
+aio:Status rdf:type owl:Class ;
+           rdfs:comment "The status of the annotation. Four statuses are considered by default: Closed, InProgress, Open, and ReOpened."@en ;
+           rdfs:label "Status" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Line
-aio:Line rdf:type owl:Class ;
-         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty aio:hasPoint ;
-                           owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                           owl:onClass aio:Coordinate3D
-                         ] ;
-         rdfs:comment "Lines used to add markup in 3D."@en ;
-         rdfs:label "Line"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Markup
-aio:Markup rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:hasBimSnippet ;
-                             owl:someValuesFrom aio:File
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:hasFile ;
-                             owl:someValuesFrom aio:File
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:hasTopic ;
-                             owl:someValuesFrom aio:Topic
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:relatedToProject ;
-                             owl:someValuesFrom kpi:Project
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:hasComment ;
-                             owl:allValuesFrom aio:Comment
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty aio:hasViewpoint ;
-                             owl:allValuesFrom aio:Viewpoint
-                           ] ;
-           rdfs:comment "Textual information about the topic."@en ;
-           rdfs:label "Markup"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Stage
-aio:Stage rdf:type owl:Class ;
-          rdfs:subClassOf aio:Concept ;
-          rdfs:comment "Concept that groups predefined stages of a construction project."@en ;
-          rdfs:label "Stage"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#StageConceptScheme
-aio:StageConceptScheme rdf:type owl:Class ;
-                       rdfs:subClassOf aio:ConceptScheme ;
-                       rdfs:label "Stage concept scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Topic
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic
 aio:Topic rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:hasDocument ;
-                            owl:allValuesFrom aio:DocumentReference
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:hasStage ;
-                            owl:allValuesFrom aio:Stage
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:relatedToTopic ;
-                            owl:allValuesFrom aio:Topic
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:topicLabel ;
-                            owl:allValuesFrom aio:TopicLabelConcept
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:topicStatus ;
-                            owl:allValuesFrom aio:TopicStatusConcept
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:topicType ;
-                            owl:allValuesFrom aio:TopicConcept
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:creationAuthor ;
-                            owl:someValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:creationDate ;
-                            owl:someValuesFrom xsd:dateTime
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:reference ;
-                            owl:someValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:title ;
-                            owl:someValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:assignedTo ;
-                            owl:allValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:description ;
-                            owl:allValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:dueDate ;
-                            owl:allValuesFrom xsd:dateTime
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:index ;
-                            owl:allValuesFrom xsd:integer
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:modifiedAuthor ;
-                            owl:allValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:modifiedDate ;
-                            owl:allValuesFrom xsd:dateTime
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty aio:priority ;
-                            owl:allValuesFrom xsd:integer
-                          ] ;
-          rdfs:comment "Reference information of the topic (such as a problem in the design, described in BCF file)."@en ;
-          rdfs:label "Topic"@en .
+          rdfs:comment "Topics to label the annotations according to their types. Four topics are considered: Comment, Issue, Request, and Solution."@en ;
+          rdfs:label "Topic" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#TopicConcept
-aio:TopicConcept rdf:type owl:Class ;
-                 rdfs:subClassOf aio:Concept ;
-                 rdfs:comment "Concept that groups the different topic types."@en ;
-                 rdfs:label "Topic concept"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#TopicConceptScheme
-aio:TopicConceptScheme rdf:type owl:Class ;
-                       rdfs:subClassOf aio:ConceptScheme ;
-                       rdfs:label "Topic concept scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#TopicLabelConcept
-aio:TopicLabelConcept rdf:type owl:Class ;
-                      rdfs:subClassOf aio:Concept ;
-                      rdfs:comment "Concept that groups the different labels that are applicable to a topic."@en ;
-                      rdfs:label "Topic label concept"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#TopicLabelConceptScheme
-aio:TopicLabelConceptScheme rdf:type owl:Class ;
-                            rdfs:subClassOf aio:ConceptScheme ;
-                            rdfs:label "Topic label concept scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#TopicStatusConcept
-aio:TopicStatusConcept rdf:type owl:Class ;
-                       rdfs:subClassOf aio:Concept ;
-                       rdfs:comment "Concept that groups a set of predefined status options for a topic."@en ;
-                       rdfs:label "Topic status concept"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#TopicStatusConceptScheme
-aio:TopicStatusConceptScheme rdf:type owl:Class ;
-                             rdfs:subClassOf aio:ConceptScheme ;
-                             rdfs:label "Topic status concept scheme"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ViewSetupHints
-aio:ViewSetupHints rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty aio:openingsVisible ;
-                                     owl:allValuesFrom xsd:boolean
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty aio:spaceBoundariesVisible ;
-                                     owl:allValuesFrom xsd:boolean
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty aio:spacesVisible ;
-                                     owl:allValuesFrom xsd:boolean
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty aio:openingsVisible ;
-                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onDataRange xsd:boolean
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty aio:spaceBoundariesVisible ;
-                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onDataRange xsd:boolean
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty aio:spacesVisible ;
-                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onDataRange xsd:boolean
-                                   ] ;
-                   rdfs:comment "Information about the default visibility for elements of certain types (SpacesVisible, SpaceBoundariesVisible and OpeningsVisible) that should be applied if not stated otherwise."@en ;
-                   rdfs:label "View setup hints"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Viewpoint
-aio:Viewpoint rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:hasViewSetupHints ;
-                                owl:someValuesFrom aio:ViewSetupHints
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:hasBitmap ;
-                                owl:allValuesFrom aio:Bitmap
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:hasClippingPlane ;
-                                owl:allValuesFrom aio:ClippingPlane
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:hasComponentSelection ;
-                                owl:allValuesFrom aio:ComponentSelection
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:hasLine ;
-                                owl:allValuesFrom aio:Line
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:index ;
-                                owl:someValuesFrom xsd:integer
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:snapshotName ;
-                                owl:someValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty aio:viewpointName ;
-                                owl:someValuesFrom xsd:string
-                              ] ;
-              rdfs:comment "Viewpoints related to one or more comments."@en ;
-              rdfs:label "Viewpoint"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Component
-building:Component rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty building:ifcGuid ;
-                                     owl:someValuesFrom xsd:string
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty building:autoringToolId ;
-                                     owl:allValuesFrom xsd:string
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty building:originatingSystem ;
-                                     owl:allValuesFrom xsd:string
-                                   ] ;
-                   rdfs:comment "An individual building component."@en ;
-                   rdfs:label "Component"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
-kpi:Project rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty kpi:ifcGuid ;
-                              owl:someValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty aio:name ;
-                              owl:allValuesFrom xsd:string
-                            ] ;
-            rdfs:comment "The project the topic belongs to."@en ;
-            rdfs:label "Project"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#Element
+building:Element rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty aio:hasAnnotation ;
+                                   owl:allValuesFrom aio:Annotation
+                                 ] ;
+                 rdfs:label "Element" .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Architecture
-aio:Architecture rdf:type owl:NamedIndividual ,
-                          aio:TopicLabelConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Closed
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Closed
 aio:Closed rdf:type owl:NamedIndividual ,
-                    aio:TopicStatusConcept .
+                    aio:Status .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Comment
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Comment
 aio:Comment rdf:type owl:NamedIndividual ,
-                     aio:TopicConcept .
+                     aio:Topic .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ConstructionEnd
-aio:ConstructionEnd rdf:type owl:NamedIndividual ,
-                             aio:Stage .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ConstructionStart
-aio:ConstructionStart rdf:type owl:NamedIndividual ,
-                               aio:Stage .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Electrical
-aio:Electrical rdf:type owl:NamedIndividual ,
-                        aio:TopicLabelConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#InProgress
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#InProgress
 aio:InProgress rdf:type owl:NamedIndividual ,
-                        aio:TopicStatusConcept .
+                        aio:Status .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Issue
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Issue
 aio:Issue rdf:type owl:NamedIndividual ,
-                   aio:TopicConcept .
+                   aio:Topic .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#JPG
-aio:JPG rdf:type owl:NamedIndividual ,
-                 aio:BitmapFormat .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Mechanical
-aio:Mechanical rdf:type owl:NamedIndividual ,
-                        aio:TopicLabelConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Open
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Open
 aio:Open rdf:type owl:NamedIndividual ,
-                  aio:TopicStatusConcept .
+                  aio:Status .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#PNG
-aio:PNG rdf:type owl:NamedIndividual ,
-                 aio:BitmapFormat .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#PreliminaryPlanningEnd
-aio:PreliminaryPlanningEnd rdf:type owl:NamedIndividual ,
-                                    aio:Stage .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ReOpened
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#ReOpened
 aio:ReOpened rdf:type owl:NamedIndividual ,
-                      aio:TopicStatusConcept .
+                      aio:Status .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Request
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Request
 aio:Request rdf:type owl:NamedIndividual ,
-                     aio:TopicConcept .
+                     aio:Topic .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Solution
+###  http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Solution
 aio:Solution rdf:type owl:NamedIndividual ,
-                      aio:TopicConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Specifications
-aio:Specifications rdf:type owl:NamedIndividual ,
-                            aio:TopicLabelConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Structure
-aio:Structure rdf:type owl:NamedIndividual ,
-                       aio:TopicLabelConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#Technology
-aio:Technology rdf:type owl:NamedIndividual ,
-                        aio:TopicLabelConcept .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ifc
-aio:ifc rdf:type owl:NamedIndividual ,
-                 aio:BimFormat .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#ifcXML
-aio:ifcXML rdf:type owl:NamedIndividual ,
-                    aio:BimFormat .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotated-information#xlsx
-aio:xlsx rdf:type owl:NamedIndividual ,
-                  aio:BimFormat .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-aio:Comment rdfs:label "Comment"@en ;
-            rdfs:comment "Comments to record discussion between different parties related to the topic."@en .
+                      aio:Topic .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
