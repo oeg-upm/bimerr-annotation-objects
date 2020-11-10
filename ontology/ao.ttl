@@ -1,799 +1,1029 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/annotation-objects#> .
+@prefix ao: <http://bimerr.iot.linkeddata.es/def/annotation-objects#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix io: <http://bimerr.iot.linkeddata.es/def/information-objects#> .
+@prefix kpi: <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix ao: <http://bimerr.iot.linkeddata.es/def/annotation-objects#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix building: <http://bimerr.iot.linkeddata.es/def/building#> .
-@prefix kpi: <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
-@prefix io: <http://bimerr.iot.linkeddata.es/def/information-objects#> .
 @base <http://bimerr.iot.linkeddata.es/def/annotation-objects#> .
 
 <http://bimerr.iot.linkeddata.es/def/annotation-objects#> rdf:type owl:Ontology ;
-			dc:creator "Serge Chávez-Feria" ;
-			dc:creator "María Poveda-Villalón" ;
-			owl:versionInfo "0.0.2" ;
-			dc:title "Annotations Ontology" .
+                                                           dc:creator "María Poveda-Villalón" ,
+                                                                      "Serge Chávez-Feria" ;
+                                                           dc:title "Annotations Ontology" ;
+                                                           owl:versionInfo "0.0.3" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
-### ao:hasComment
-ao:hasComment rdf:type owl:ObjectProperty ;
-		rdfs:label "has comment" .
-
-### io:hasExtension
-io:hasExtension rdf:type owl:ObjectProperty ;
-		rdfs:label "has extension" .
-
-### ao:hasTopicStatus
-ao:hasTopicStatus rdf:type owl:ObjectProperty ;
-		rdfs:label "has topic status" .
-
-### ao:relatedToProject
-ao:relatedToProject rdf:type owl:ObjectProperty ;
-		rdfs:label "related to project" .
-
-### ao:hasFile
-ao:hasFile rdf:type owl:ObjectProperty ;
-		rdfs:label "has file" .
-
-### ao:hasBimSnippet
-ao:hasBimSnippet rdf:type owl:ObjectProperty ;
-		rdfs:label "has bim snippet" .
-
-### ao:hasReferenceLink
-ao:hasReferenceLink rdf:type owl:ObjectProperty ;
-		rdfs:label "has reference link" .
-
-### ao:hasDocumentReference
-ao:hasDocumentReference rdf:type owl:ObjectProperty ;
-		rdfs:label "has document reference" .
-
-### ao:hasViewpoint
-ao:hasViewpoint rdf:type owl:ObjectProperty ;
-		rdfs:label "has viewpoint" .
-
-### ao:relatedToComment
-ao:relatedToComment rdf:type owl:ObjectProperty ;
-		rdfs:label "related to comment" .
-
-### ao:hasComponent
-ao:hasComponent rdf:type owl:ObjectProperty ;
-		rdfs:label "has component" .
-
-### ao:hasLine
-ao:hasLine rdf:type owl:ObjectProperty ;
-		rdfs:label "has line" .
-
-### ao:hasClippingPlane
-ao:hasClippingPlane rdf:type owl:ObjectProperty ;
-		rdfs:label "has clipping plane" .
-
-### ao:hasBitmap
-ao:hasBitmap rdf:type owl:ObjectProperty ;
-		rdfs:label "has bitmap" .
-
-### ao:hasCamera
-ao:hasCamera rdf:type owl:ObjectProperty ;
-		rdfs:label "has camera" .
-
-### ao:hasTopicLabel
-ao:hasTopicLabel rdf:type owl:ObjectProperty ;
-		rdfs:label "has topic label" .
-
-### ao:hasStage
-ao:hasStage rdf:type owl:ObjectProperty ;
-		rdfs:label "has stage" .
-
-### ao:hasTopicType
-ao:hasTopicType rdf:type owl:ObjectProperty ;
-		rdfs:label "has topic type" .
-
-### ao:relatedToTopic
-ao:relatedToTopic rdf:type owl:ObjectProperty ;
-		rdfs:label "related to topic" .
-
-### ao:hasPoint
-ao:hasPoint rdf:type owl:ObjectProperty ;
-		rdfs:label "has point" .
-
-### ao:hasDirection
-ao:hasDirection rdf:type owl:ObjectProperty ;
-		rdfs:label "has direction" .
-
-### ao:hasLocation
-ao:hasLocation rdf:type owl:ObjectProperty ;
-		rdfs:label "has location" .
-
-### ao:hasLocation
-ao:hasLocation rdf:type owl:ObjectProperty ;
-		rdfs:label "has location" .
-
-### ao:normalVector
-ao:normalVector rdf:type owl:ObjectProperty ;
-		rdfs:label "normal vector" .
-
-### ao:upVector
-ao:upVector rdf:type owl:ObjectProperty ;
-		rdfs:label "up vector" .
-
-### ao:hasFormat
-ao:hasFormat rdf:type owl:ObjectProperty ;
-		rdfs:label "has format" .
-
-### ao:cameraViewPoint
-ao:cameraViewPoint rdf:type owl:ObjectProperty ;
-		rdfs:label "camera view point" .
-
-### ao:cameraDirection
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection
 ao:cameraDirection rdf:type owl:ObjectProperty ;
-		rdfs:label "camera direction" .
+                   rdfs:comment "Indicates the camera direction of the viewpoint."@en ;
+                   rdfs:label "camera direction" .
 
-### ao:cameraUpVector
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector
 ao:cameraUpVector rdf:type owl:ObjectProperty ;
-		rdfs:label "camera up vector" .
+                  rdfs:comment "Indicates the camera up vector."@en ;
+                  rdfs:label "camera up vector" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint
+ao:cameraViewPoint rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Indicates the camera viewpoint direction."@en ;
+                   rdfs:label "camera view point" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet
+ao:hasBimSnippet rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Explicit property to relate a topic to an specific part of the BIM Model."@en ;
+                 rdfs:label "has bim snippet" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap
+ao:hasBitmap rdf:type owl:ObjectProperty ;
+             rdfs:comment "Relates a viewpoint with a bitmap element."@en ;
+             rdfs:label "has bitmap" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera
+ao:hasCamera rdf:type owl:ObjectProperty ;
+             rdfs:comment "Relates a viewpoint with the camera being used."@en ;
+             rdfs:label "has camera" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane
+ao:hasClippingPlane rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Relates a viewpoint with a clipping plane used to define a subsection in the building model."@en ;
+                    rdfs:label "has clipping plane" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment
+ao:hasComment rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relates a topic with a comment."@en ;
+              rdfs:label "has comment" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent
+ao:hasComponent rdf:type owl:ObjectProperty ;
+                rdfs:comment "Related a viewpoint with the building elements it is conformed."@en ;
+                rdfs:label "has component" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection
+ao:hasDirection rdf:type owl:ObjectProperty ;
+                rdfs:comment "Indicates a direction given by a 3D world coordinate."@en ;
+                rdfs:label "has direction" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference
+ao:hasDocumentReference rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Links a topic to extra document references, such as additional payloads, or links."@en ;
+                        rdfs:label "has document reference" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile
+ao:hasFile rdf:type owl:ObjectProperty ;
+           rdfs:comment "Link a topic with internal or external files such as BIM models, videos, images, text, etc."@en ;
+           rdfs:label "has file" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat
+ao:hasFormat rdf:type owl:ObjectProperty ;
+             rdfs:label "has format" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine
+ao:hasLine rdf:type owl:ObjectProperty ;
+           rdfs:comment "Connects a viewpoint with a line being used to add markups in 3D."@en ;
+           rdfs:label "has line" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation
+ao:hasLocation rdf:type owl:ObjectProperty ;
+               rdfs:comment "Indicates the location of the bitmap, specifically the center of the bitmap in 3D world coordinates."@en ;
+               rdfs:label "has location" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint
+ao:hasPoint rdf:type owl:ObjectProperty ;
+            rdfs:comment "Relates to an specific point in 3D world coordinates."@en ;
+            rdfs:label "has point" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink
+ao:hasReferenceLink rdf:type owl:ObjectProperty ;
+                    rdfs:comment "External references that help complemente the topic in discussion."@en ;
+                    rdfs:label "has reference link" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage
+ao:hasStage rdf:type owl:ObjectProperty ;
+            rdfs:comment "Relates a topic with its stage."@en ;
+            rdfs:label "has stage" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel
+ao:hasTopicLabel rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relates a topic with its label."@en ;
+                 rdfs:label "has topic label" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus
+ao:hasTopicStatus rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relates a topic with its status."@en ;
+                  rdfs:label "has topic status" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType
+ao:hasTopicType rdf:type owl:ObjectProperty ;
+                rdfs:comment "Relates a topic with its type."@en ;
+                rdfs:label "has topic type" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint
+ao:hasViewpoint rdf:type owl:ObjectProperty ;
+                rdfs:comment "Relates a comment with a viewpoint."@en ;
+                rdfs:label "has viewpoint" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector
+ao:normalVector rdf:type owl:ObjectProperty ;
+                rdfs:comment "Indicates the normal direction of the bitmap."@en ;
+                rdfs:label "normal vector" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding
+ao:relatedToBuilding rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Relates a topic to a building."@en ;
+                     rdfs:label "related to building"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment
+ao:relatedToComment rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Relates a viewpoint to a comment over a topic."@en ;
+                    rdfs:label "related to comment" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement
+ao:relatedToElement rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Relates a topic to an element."@en ;
+                    rdfs:label "related to element"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject
+ao:relatedToProject rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Relates a topic to a project."@en ;
+                    rdfs:label "related to project" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace
+ao:relatedToSpace rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relates a topic to a space."@en ;
+                  rdfs:label "related to space"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey
+ao:relatedToStorey rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Relates a topic to a storey."@en ;
+                   rdfs:label "related to storey"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic
+ao:relatedToTopic rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relates a topic to another topic."@en ;
+                  rdfs:label "related to topic" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone
+ao:relatedToZone rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relates a topic to a zone."@en ;
+                 rdfs:label "related to zone"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector
+ao:upVector rdf:type owl:ObjectProperty ;
+            rdfs:comment "Indicates the up direction of the bitmap."@en ;
+            rdfs:label "up vector" .
+
 
 #################################################################
-#    Data Properties
+#    Data properties
 #################################################################
 
-### kpi:identifier
-kpi:identifier rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "identifier" .
-
-### ao:identifier
-ao:identifier rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "identifier" .
-
-### ao:viewpointName
-ao:viewpointName rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "viewpoint name" .
-
-### ao:snapshotName
-ao:snapshotName rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "snapshot name" .
-
-### ao:index
-ao:index rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:integer ;
-		rdfs:label "index" .
-
-### ao:creationDate
-ao:creationDate rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:dateTime ;
-		rdfs:label "creation date" .
-
-### ao:creationAuthor
-ao:creationAuthor rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "creation author" .
-
-### ao:comment
-ao:comment rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "comment" .
-
-### ao:modifiedDate
-ao:modifiedDate rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:dateTime ;
-		rdfs:label "modified date" .
-
-### ao:modifiedAuthor
-ao:modifiedAuthor rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "modified author" .
-
-### ao:title
-ao:title rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "title" .
-
-### ao:priority
-ao:priority rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:integer ;
-		rdfs:label "priority" .
-
-### ao:dueDate
-ao:dueDate rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:dateTime ;
-		rdfs:label "due date" .
-
-### ao:assignedTo
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo
 ao:assignedTo rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "assigned to" .
+              rdfs:range xsd:string ;
+              rdfs:comment "The user to whom this topic is assigned to. Recommended to be in email format."@en ;
+              rdfs:label "assigned to" .
 
-### ao:description
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#comment
+ao:comment rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Large description of the comment."@en ;
+           rdfs:label "comment" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor
+ao:creationAuthor rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indicates the creator of the entity."@en ;
+                  rdfs:label "creation author" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate
+ao:creationDate rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime ;
+                rdfs:comment "Indicates the creation date of the entity."@en ;
+                rdfs:label "creation date" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#description
 ao:description rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "description" .
+               rdfs:range xsd:string ;
+               rdfs:comment "Provides a description of the topic."@en ;
+               rdfs:label "description" .
 
-### ao:xCoordinate
-ao:xCoordinate rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:float ;
-		rdfs:label "x coordinate" .
 
-### ao:yCoordinate
-ao:yCoordinate rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:float ;
-		rdfs:label "y coordinate" .
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate
+ao:dueDate rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:dateTime ;
+           rdfs:comment "Date until when the topics issue needs to be resolved."@en ;
+           rdfs:label "due date" .
 
-### ao:zCoordinate
-ao:zCoordinate rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:float ;
-		rdfs:label "z coordinate" .
 
-### ao:reference
-ao:reference rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "reference" .
-
-### building:ifcIdentifier
-building:ifcIdentifier rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "ifc identifier" .
-
-### building:originatingSystem
-building:originatingSystem rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "originating system" .
-
-### building:autoringToolId
-building:autoringToolId rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "autoring tool id" .
-
-### building:colorDisplay
-building:colorDisplay rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:string ;
-		rdfs:label "color display" .
-
-### ao:viewToWorldScale
-ao:viewToWorldScale rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:float ;
-		rdfs:label "view to world scale" .
-
-### ao:fieldOfView
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView
 ao:fieldOfView rdf:type owl:DatatypeProperty ;
-		rdfs:range xsd:float ;
-		rdfs:label "field of view" .
+               rdfs:range xsd:float ;
+               rdfs:comment "Camera’s field of view angle in degrees."@en ;
+               rdfs:label "field of view" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier
+ao:identifier rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Attribute to uniquely identify the topics, comments and viewpoints."@en ;
+              rdfs:label "identifier" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#index
+ao:index rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Number to maintain the order of the topics."@en ;
+         rdfs:label "index" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor
+ao:modifiedAuthor rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indicates who modified the entity."@en ;
+                  rdfs:label "modified author" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate
+ao:modifiedDate rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime ;
+                rdfs:comment "Indicates the last time the entity was modified."@en ;
+                rdfs:label "modified date" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#priority
+ao:priority rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "Topic priority."@en ;
+            rdfs:label "priority" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName
+ao:snapshotName rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Filename of the snapshot taken under a viewpoint."@en ;
+                rdfs:label "snapshot name" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId
+ao:taskId rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Identifier of the renovation project task."@en ;
+          rdfs:label "task id"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#title
+ao:title rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Title of the topic."@en ;
+         rdfs:label "title" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale
+ao:viewToWorldScale rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:float ;
+                    rdfs:comment "Scaling from view to world."@en ;
+                    rdfs:label "view to world scale" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName
+ao:viewpointName rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Name of the viewpoint."@en ;
+                 rdfs:label "viewpoint name" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate
+ao:xCoordinate rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:float ;
+               rdfs:comment "X component of a 3D coordinate."@en ;
+               rdfs:label "x coordinate" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate
+ao:yCoordinate rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:float ;
+               rdfs:comment "Y component of a 3D coordinate."@en ;
+               rdfs:label "y coordinate" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate
+ao:zCoordinate rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:float ;
+               rdfs:comment "Z component of a 3D coordinate."@en ;
+               rdfs:label "z coordinate" .
+
 
 #################################################################
 #    Classes
 #################################################################
 
-### kpi:Project
-kpi:Project rdf:type owl:Class ;
-	rdfs:label "Project" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty kpi:identifier ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty kpi:identifier ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] .
-
-### io:InformationObject
-io:InformationObject rdf:type owl:Class ;
-	rdfs:label "Information Object" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty io:hasExtension ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass io:Format ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty io:hasExtension ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass io:Format ] .
-
-### ao:Topic
-ao:Topic rdf:type owl:Class ;
-	rdfs:label "Topic" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:identifier ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:identifier ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:title ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:title ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:priority ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:integer ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:index ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:integer ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationDate ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:dateTime ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationDate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:dateTime ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationAuthor ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationAuthor ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:modifiedDate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:dateTime ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:modifiedAuthor ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:dueDate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:dateTime ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:assignedTo ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:description ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasComment ;
-		  owl:allValuesFrom ao:Comment ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasTopicStatus ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:TopicStatus ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:relatedToProject ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass kpi:Project ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:relatedToProject ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass kpi:Project ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasFile ;
-		  owl:allValuesFrom io:InformationObject ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasFile ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass io:InformationObject ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasBimSnippet ;
-		  owl:allValuesFrom io:InformationObject ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasReferenceLink ;
-		  owl:allValuesFrom io:InformationObject ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasReferenceLink ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass io:InformationObject ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasDocumentReference ;
-		  owl:allValuesFrom io:InformationObject ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasDocumentReference ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass io:InformationObject ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasStage ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Stage ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasTopicType ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:TopicType ] .
-
-### ao:Comment
-ao:Comment rdf:type owl:Class ;
-	rdfs:label "Comment" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:identifier ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:identifier ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationDate ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:dateTime ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationDate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:dateTime ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationAuthor ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:creationAuthor ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:comment ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:comment ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:modifiedDate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:dateTime ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:modifiedAuthor ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasViewpoint ;
-		  owl:allValuesFrom ao:Viewpoint ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasViewpoint ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Viewpoint ] .
-
-### ao:Viewpoint
-ao:Viewpoint rdf:type owl:Class ;
-	rdfs:label "Viewpoint" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:identifier ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:identifier ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:viewpointName ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:snapshotName ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:index ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:integer ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:relatedToComment ;
-		  owl:allValuesFrom ao:Comment ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:relatedToComment ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Comment ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasComponent ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass building:Element ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasLine ;
-		  owl:allValuesFrom ao:Line ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasClippingPlane ;
-		  owl:allValuesFrom ao:ClippingPlane ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasBitmap ;
-		  owl:allValuesFrom ao:Bitmap ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasCamera ;
-		  owl:allValuesFrom ao:Camera ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasCamera ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Camera ] .
-
-### ao:TopicLabel
-ao:TopicLabel rdf:type owl:Class ;
-	rdfs:label "Topic Label" .
-
-### ao:Stage
-ao:Stage rdf:type owl:Class ;
-	rdfs:label "Stage" .
-
-### ao:TopicType
-ao:TopicType rdf:type owl:Class ;
-	rdfs:label "Topic Type" .
-
-### ao:TopicStatus
-ao:TopicStatus rdf:type owl:Class ;
-	rdfs:label "Topic Status" .
-
-### ao:Line
-ao:Line rdf:type owl:Class ;
-	rdfs:label "Line" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasPoint ;
-		  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasPoint ;
-		  owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] .
-
-### ao:ClippingPlane
-ao:ClippingPlane rdf:type owl:Class ;
-	rdfs:label "Clipping Plane" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasDirection ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasDirection ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasLocation ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasLocation ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] .
-
-### ao:Coordinate3D
-ao:Coordinate3D rdf:type owl:Class ;
-	rdfs:label "Coordinate3 D" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:xCoordinate ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:xCoordinate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:yCoordinate ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:yCoordinate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:zCoordinate ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:zCoordinate ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] .
-
-### ao:Bitmap
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap
 ao:Bitmap rdf:type owl:Class ;
-	rdfs:label "Bitmap" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:reference ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:reference ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasLocation ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasLocation ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:normalVector ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:normalVector ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:upVector ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:upVector ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasFormat ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass io:Format ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:hasFormat ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass io:Format ] .
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:hasFormat ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass io:Format
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:hasLocation ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:normalVector ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:upVector ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:hasFormat ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass io:Format
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:hasLocation ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:normalVector ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:upVector ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ;
+          rdfs:comment "A list of bitmaps can be used to add more information, for example, text in the visualization."@en ;
+          rdfs:label "Bitmap" .
 
-### building:Element
-building:Element rdf:type owl:Class ;
-	rdfs:label "Element" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty building:ifcIdentifier ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty building:ifcIdentifier ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty building:originatingSystem ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty building:autoringToolId ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty building:colorDisplay ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:string ] .
 
-### ao:Camera
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera
 ao:Camera rdf:type owl:Class ;
-	rdfs:label "Camera" ;
-	rdfs:subClassOf 
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:cameraViewPoint ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:cameraViewPoint ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:cameraDirection ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:cameraDirection ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:cameraUpVector ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:cameraUpVector ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onClass ao:Coordinate3D ] .
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:cameraDirection ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:cameraUpVector ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:cameraViewPoint ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:cameraDirection ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:cameraUpVector ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ao:cameraViewPoint ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass ao:Coordinate3D
+                          ] ;
+          rdfs:comment "Represents the type of camera being used in the viewpoint."@en ;
+          rdfs:label "Camera" .
 
-### ao:OrthogonalCamera
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane
+ao:ClippingPlane rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty ao:hasDirection ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass ao:Coordinate3D
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ao:hasLocation ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass ao:Coordinate3D
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ao:hasDirection ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass ao:Coordinate3D
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ao:hasLocation ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass ao:Coordinate3D
+                                 ] ;
+                 rdfs:comment "Clipping Planes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en ;
+                 rdfs:label "Clipping Plane" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment
+ao:Comment rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:hasViewpoint ;
+                             owl:allValuesFrom ao:Viewpoint
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:hasViewpoint ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass ao:Viewpoint
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:comment ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:creationAuthor ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:creationDate ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:identifier ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:comment ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:creationAuthor ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:creationDate ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:identifier ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:modifiedAuthor ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ao:modifiedDate ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ;
+           rdfs:comment "Their purpose is to record discussion between different parties related to the topic."@en ;
+           rdfs:label "Comment" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D
+ao:Coordinate3D rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty ao:xCoordinate ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ao:yCoordinate ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ao:zCoordinate ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ao:xCoordinate ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ao:yCoordinate ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty ao:zCoordinate ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] ;
+                rdfs:comment "Represents a coordinate in 3 dimensions."@en ;
+                rdfs:label "Coordinate3 D" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Line
+ao:Line rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty ao:hasPoint ;
+                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                          owl:onClass ao:Coordinate3D
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty ao:hasPoint ;
+                          owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                          owl:onClass ao:Coordinate3D
+                        ] ;
+        rdfs:comment "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."@en ;
+        rdfs:label "Line" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera
 ao:OrthogonalCamera rdf:type owl:Class ;
-	rdfs:label "Orthogonal Camera" ;
-	rdfs:subClassOf ao:Camera ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:viewToWorldScale ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:viewToWorldScale ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] .
+                    rdfs:subClassOf ao:Camera ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty ao:viewToWorldScale ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:float
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty ao:viewToWorldScale ;
+                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:float
+                                    ] ;
+                    rdfs:comment "Represents an orthogonal camera being used in the viewpoint."@en ;
+                    rdfs:label "Orthogonal Camera" .
 
-### ao:PerspectiveCamera
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera
 ao:PerspectiveCamera rdf:type owl:Class ;
-	rdfs:label "Perspective Camera" ;
-	rdfs:subClassOf ao:Camera ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:fieldOfView ;
-		  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] ,
-		[ rdf:type owl:Restriction ;
-		  owl:onProperty ao:fieldOfView ;
-		  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-		  owl:onDataRange xsd:float ] .
+                     rdfs:subClassOf ao:Camera ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty ao:fieldOfView ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:float
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty ao:fieldOfView ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:float
+                                     ] ;
+                     rdfs:comment "Represents an perspective camera being used in the viewpoint."@en ;
+                     rdfs:label "Perspective Camera" .
 
-### io:Format
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage
+ao:Stage rdf:type owl:Class ;
+         rdfs:comment "Stage of the topic such as Planning, Construction, etc."@en ;
+         rdfs:label "Stage" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic
+ao:Topic rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToBuilding ;
+                           owl:someValuesFrom building:Building
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToElement ;
+                           owl:someValuesFrom building:Element
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToSpace ;
+                           owl:someValuesFrom building:Space
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToStorey ;
+                           owl:someValuesFrom building:Storey
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToTopic ;
+                           owl:someValuesFrom ao:Topic
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToZone ;
+                           owl:someValuesFrom building:Apartment
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasBimSnippet ;
+                           owl:allValuesFrom io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasComment ;
+                           owl:allValuesFrom ao:Comment
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasDocumentReference ;
+                           owl:allValuesFrom io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasFile ;
+                           owl:allValuesFrom io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasReferenceLink ;
+                           owl:allValuesFrom io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasDocumentReference ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasFile ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasReferenceLink ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToProject ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass kpi:Project
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasStage ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass ao:Stage
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasTopicStatus ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass ao:TopicStatus
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:hasTopicType ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass ao:TopicType
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:relatedToProject ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass kpi:Project
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:taskId ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:creationAuthor ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:creationDate ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:dateTime
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:identifier ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:title ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:assignedTo ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:creationAuthor ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:creationDate ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:dateTime
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:description ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:dueDate ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:dateTime
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:identifier ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:index ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:integer
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:modifiedAuthor ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:modifiedDate ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:dateTime
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:priority ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:integer
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ao:title ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ;
+         rdfs:comment "Topic contains reference information of the topic."@en ;
+         rdfs:label "Topic" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel
+ao:TopicLabel rdf:type owl:Class ;
+              rdfs:comment "Label of the topic, such as Electrical, Architecture, Structural, etc."@en ;
+              rdfs:label "Topic Label" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus
+ao:TopicStatus rdf:type owl:Class ;
+               rdfs:comment "Status of the topic such as Open, In Progress, Closed, etc."@en ;
+               rdfs:label "Topic Status" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType
+ao:TopicType rdf:type owl:Class ;
+             rdfs:comment "Type of the topic such as Comment, Issue, Request, etc."@en ;
+             rdfs:label "Topic Type" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint
+ao:Viewpoint rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:hasBitmap ;
+                               owl:allValuesFrom ao:Bitmap
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:hasCamera ;
+                               owl:allValuesFrom ao:Camera
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:hasClippingPlane ;
+                               owl:allValuesFrom ao:ClippingPlane
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:hasLine ;
+                               owl:allValuesFrom ao:Line
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:relatedToComment ;
+                               owl:allValuesFrom ao:Comment
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:hasComponent ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass building:Element
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:relatedToComment ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass ao:Comment
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:hasCamera ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass ao:Camera
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:identifier ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:identifier ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:index ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:integer
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:snapshotName ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ao:viewpointName ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             rdfs:comment "The viewpoint from which the BIM model is being viewed in the modeling tool."@en ;
+             rdfs:label "Viewpoint" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Apartment
+building:Apartment rdf:type owl:Class ;
+                   rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Apartment"@en ;
+                   rdfs:label "Apartment"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Building
+building:Building rdf:type owl:Class ;
+                  rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Building"@en ;
+                  rdfs:label "Building"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Element
+building:Element rdf:type owl:Class ;
+                 rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Element"@en ;
+                 rdfs:label "Element" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Space
+building:Space rdf:type owl:Class ;
+               rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Space"@en ;
+               rdfs:label "Space"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Storey
+building:Storey rdf:type owl:Class ;
+                rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Storey"@en ;
+                rdfs:label "Storey"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/information-objects#Format
 io:Format rdf:type owl:Class ;
-	rdfs:label "Format" .
+          rdfs:label "Format" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject
+io:InformationObject rdf:type owl:Class ;
+                     rdfs:label "Information Object" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
+kpi:Project rdf:type owl:Class ;
+            rdfs:comment "See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"@en ;
+            rdfs:label "Project" .
+
 
 #################################################################
-#    Instances
+#    Individuals
 #################################################################
 
-### ao:ArchitectureTopicLabel
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel
 ao:ArchitectureTopicLabel rdf:type owl:NamedIndividual ,
-		ao:TopicLabel .
+                                   ao:TopicLabel .
 
-### ao:StructureTopicLabel
-ao:StructureTopicLabel rdf:type owl:NamedIndividual ,
-		ao:TopicLabel .
 
-### ao:MechanicalTopicLabel
-ao:MechanicalTopicLabel rdf:type owl:NamedIndividual ,
-		ao:TopicLabel .
-
-### ao:ElectricalTopicLabel
-ao:ElectricalTopicLabel rdf:type owl:NamedIndividual ,
-		ao:TopicLabel .
-
-### ao:SpecificationsTopicLabel
-ao:SpecificationsTopicLabel rdf:type owl:NamedIndividual ,
-		ao:TopicLabel .
-
-### ao:TechnologyTopicLabel
-ao:TechnologyTopicLabel rdf:type owl:NamedIndividual ,
-		ao:TopicLabel .
-
-### ao:PreliminaryPlanningEnd
-ao:PreliminaryPlanningEnd rdf:type owl:NamedIndividual ,
-		ao:Stage .
-
-### ao:ConstructionStart
-ao:ConstructionStart rdf:type owl:NamedIndividual ,
-		ao:Stage .
-
-### ao:ConstructionEnd
-ao:ConstructionEnd rdf:type owl:NamedIndividual ,
-		ao:Stage .
-
-### ao:CommentTopicType
-ao:CommentTopicType rdf:type owl:NamedIndividual ,
-		ao:TopicType .
-
-### ao:IssueTopicType
-ao:IssueTopicType rdf:type owl:NamedIndividual ,
-		ao:TopicType .
-
-### ao:RequestTopicType
-ao:RequestTopicType rdf:type owl:NamedIndividual ,
-		ao:TopicType .
-
-### ao:SolutionTopicType
-ao:SolutionTopicType rdf:type owl:NamedIndividual ,
-		ao:TopicType .
-
-### ao:OpenTopicStatus
-ao:OpenTopicStatus rdf:type owl:NamedIndividual ,
-		ao:TopicStatus .
-
-### ao:InProgressTopicStatus
-ao:InProgressTopicStatus rdf:type owl:NamedIndividual ,
-		ao:TopicStatus .
-
-### ao:ClosedTopicStatus
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus
 ao:ClosedTopicStatus rdf:type owl:NamedIndividual ,
-		ao:TopicStatus .
+                              ao:TopicStatus .
 
-### ao:ReOpenedTopicStatus
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType
+ao:CommentTopicType rdf:type owl:NamedIndividual ,
+                             ao:TopicType .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionEnd
+ao:ConstructionEnd rdf:type owl:NamedIndividual ,
+                            ao:Stage .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionStart
+ao:ConstructionStart rdf:type owl:NamedIndividual ,
+                              ao:Stage .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel
+ao:ElectricalTopicLabel rdf:type owl:NamedIndividual ,
+                                 ao:TopicLabel .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#InProgressTopicStatus
+ao:InProgressTopicStatus rdf:type owl:NamedIndividual ,
+                                  ao:TopicStatus .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#IssueTopicType
+ao:IssueTopicType rdf:type owl:NamedIndividual ,
+                           ao:TopicType .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel
+ao:MechanicalTopicLabel rdf:type owl:NamedIndividual ,
+                                 ao:TopicLabel .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#OpenTopicStatus
+ao:OpenTopicStatus rdf:type owl:NamedIndividual ,
+                            ao:TopicStatus .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd
+ao:PreliminaryPlanningEnd rdf:type owl:NamedIndividual ,
+                                   ao:Stage .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ReOpenedTopicStatus
 ao:ReOpenedTopicStatus rdf:type owl:NamedIndividual ,
-		ao:TopicStatus .
+                                ao:TopicStatus .
 
-#################################################################
-#    General Axioms
-#################################################################
 
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#RequestTopicType
+ao:RequestTopicType rdf:type owl:NamedIndividual ,
+                             ao:TopicType .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#SolutionTopicType
+ao:SolutionTopicType rdf:type owl:NamedIndividual ,
+                              ao:TopicType .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#SpecificationsTopicLabel
+ao:SpecificationsTopicLabel rdf:type owl:NamedIndividual ,
+                                     ao:TopicLabel .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#StructureTopicLabel
+ao:StructureTopicLabel rdf:type owl:NamedIndividual ,
+                                ao:TopicLabel .
+
+
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#TechnologyTopicLabel
+ao:TechnologyTopicLabel rdf:type owl:NamedIndividual ,
+                                 ao:TopicLabel .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

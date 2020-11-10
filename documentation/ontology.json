@@ -14,15 +14,15 @@
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#reference"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -35,12 +35,25 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint"
   } ]
 }, {
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
@@ -49,19 +62,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector"
-  } ]
-}, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -74,36 +74,10 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint"
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -116,7 +90,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -129,7 +103,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -140,6 +114,28 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -157,28 +153,6 @@
 }, {
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation"
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint"
-  } ]
-}, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -190,7 +164,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -201,6 +175,32 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#comment"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate"
   } ]
 }, {
   "@id" : "_:genid24",
@@ -213,36 +213,10 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor"
-  } ]
-}, {
-  "@id" : "_:genid25",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate"
-  } ]
-}, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -255,7 +229,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#comment"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -268,7 +242,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -279,6 +253,32 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -301,36 +301,36 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
-  } ]
-}, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor"
-  } ]
-}, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate"
   } ]
 }, {
   "@id" : "_:genid33",
@@ -343,12 +343,25 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate"
   } ]
 }, {
   "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
@@ -357,19 +370,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate"
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate"
   } ]
 }, {
   "@id" : "_:genid36",
@@ -382,36 +382,10 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate"
-  } ]
-}, {
-  "@id" : "_:genid37",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate"
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -422,6 +396,32 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -441,13 +441,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "2"
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale"
   } ]
 }, {
   "@id" : "_:genid41",
@@ -460,7 +460,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView"
   } ]
 }, {
   "@id" : "_:genid42",
@@ -473,69 +473,61 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView"
   } ]
 }, {
   "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
   "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ]
 }, {
   "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ]
 }, {
   "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey"
   } ]
 }, {
   "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ]
 }, {
   "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
   } ]
 }, {
   "@id" : "_:genid49",
@@ -544,7 +536,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -562,6 +554,42 @@
 }, {
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -573,7 +601,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -586,7 +614,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -599,61 +627,9 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink"
   } ]
 }, {
-  "@id" : "_:genid53",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject"
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage"
-  } ]
-}, {
-  "@id" : "_:genid55",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType"
-  } ]
-}, {
   "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
@@ -666,28 +642,28 @@
 }, {
   "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage"
   } ]
 }, {
   "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -705,46 +681,42 @@
 }, {
   "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType"
   } ]
 }, {
   "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#title"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject"
   } ]
 }, {
   "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
@@ -757,7 +729,7 @@
 }, {
   "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
@@ -770,7 +742,7 @@
 }, {
   "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
@@ -778,20 +750,20 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#description"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
   } ]
 }, {
   "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#title"
   } ]
 }, {
   "@id" : "_:genid67",
@@ -804,7 +776,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo"
   } ]
 }, {
   "@id" : "_:genid68",
@@ -814,10 +786,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#index"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor"
   } ]
 }, {
   "@id" : "_:genid69",
@@ -827,10 +799,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -853,10 +825,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#description"
   } ]
 }, {
   "@id" : "_:genid71",
@@ -866,10 +838,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#priority"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate"
   } ]
 }, {
   "@id" : "_:genid72",
@@ -882,10 +854,75 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#title"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
   } ]
 }, {
   "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#index"
+  } ]
+}, {
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor"
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#priority"
+  } ]
+}, {
+  "@id" : "_:genid77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#title"
+  } ]
+}, {
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap"
@@ -894,66 +931,13 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera"
-  } ]
-}, {
-  "@id" : "_:genid75",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane"
-  } ]
-}, {
-  "@id" : "_:genid76",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Line"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine"
-  } ]
-}, {
-  "@id" : "_:genid77",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment"
-  } ]
-}, {
-  "@id" : "_:genid78",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent"
-  } ]
-}, {
-  "@id" : "_:genid79",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -971,6 +955,59 @@
 }, {
   "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane"
+  } ]
+}, {
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Line"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine"
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment"
+  } ]
+}, {
+  "@id" : "_:genid83",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent"
+  } ]
+}, {
+  "@id" : "_:genid84",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment"
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -980,71 +1017,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera"
-  } ]
-}, {
-  "@id" : "_:genid81",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
-  } ]
-}, {
-  "@id" : "_:genid82",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
-  } ]
-}, {
-  "@id" : "_:genid83",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#index"
-  } ]
-}, {
-  "@id" : "_:genid84",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName"
-  } ]
-}, {
-  "@id" : "_:genid85",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName"
   } ]
 }, {
   "@id" : "_:genid86",
@@ -1057,7 +1029,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
   } ]
 }, {
   "@id" : "_:genid87",
@@ -1070,7 +1042,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#autoringToolId"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
   } ]
 }, {
   "@id" : "_:genid88",
@@ -1080,10 +1052,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#colorDisplay"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#index"
   } ]
 }, {
   "@id" : "_:genid89",
@@ -1096,7 +1068,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -1105,11 +1077,11 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#reference"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection"
   } ]
 }, {
   "@id" : "_:genid90",
@@ -1122,59 +1094,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#originatingSystem"
-  } ]
-}, {
-  "@id" : "_:genid91",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#Format"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension"
-  } ]
-}, {
-  "@id" : "_:genid92",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#Format"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension"
-  } ]
-}, {
-  "@id" : "_:genid93",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier"
-  } ]
-}, {
-  "@id" : "_:genid94",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#",
@@ -1188,7 +1108,7 @@
     "@value" : "Annotations Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.2"
+    "@value" : "0.0.3"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel",
@@ -1196,6 +1116,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A list of bitmaps can be used to add more information, for example, text in the visualization."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Bitmap"
   } ],
@@ -1215,18 +1139,22 @@
     "@id" : "_:genid7"
   }, {
     "@id" : "_:genid8"
-  }, {
-    "@id" : "_:genid9"
-  }, {
-    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the type of camera being used in the viewpoint."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
     "@id" : "_:genid11"
   }, {
     "@id" : "_:genid12"
@@ -1234,25 +1162,25 @@
     "@id" : "_:genid13"
   }, {
     "@id" : "_:genid14"
-  }, {
-    "@id" : "_:genid15"
-  }, {
-    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Clipping Planes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Clipping Plane"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  }, {
     "@id" : "_:genid17"
   }, {
     "@id" : "_:genid18"
-  }, {
-    "@id" : "_:genid19"
-  }, {
-    "@id" : "_:genid20"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus",
@@ -1260,10 +1188,18 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Their purpose is to record discussion between different parties related to the topic."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
+  }, {
     "@id" : "_:genid21"
   }, {
     "@id" : "_:genid22"
@@ -1283,10 +1219,6 @@
     "@id" : "_:genid29"
   }, {
     "@id" : "_:genid30"
-  }, {
-    "@id" : "_:genid31"
-  }, {
-    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType",
@@ -1300,10 +1232,18 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents a coordinate in 3 dimensions."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Coordinate3 D"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid31"
+  }, {
+    "@id" : "_:genid32"
+  }, {
     "@id" : "_:genid33"
   }, {
     "@id" : "_:genid34"
@@ -1311,10 +1251,6 @@
     "@id" : "_:genid35"
   }, {
     "@id" : "_:genid36"
-  }, {
-    "@id" : "_:genid37"
-  }, {
-    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel",
@@ -1328,13 +1264,17 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Line",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Line"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid37"
   }, {
-    "@id" : "_:genid40"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel",
@@ -1345,8 +1285,29 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents an orthogonal camera being used in the viewpoint."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Orthogonal Camera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera"
+  }, {
+    "@id" : "_:genid39"
+  }, {
+    "@id" : "_:genid40"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents an perspective camera being used in the viewpoint."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Perspective Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera"
@@ -1354,19 +1315,6 @@
     "@id" : "_:genid41"
   }, {
     "@id" : "_:genid42"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Perspective Camera"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera"
-  }, {
-    "@id" : "_:genid43"
-  }, {
-    "@id" : "_:genid44"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd",
@@ -1386,6 +1334,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Stage of the topic such as Planning, Construction, etc."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Stage"
   } ]
@@ -1398,10 +1350,18 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Topic contains reference information of the topic."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid43"
+  }, {
+    "@id" : "_:genid44"
+  }, {
     "@id" : "_:genid45"
   }, {
     "@id" : "_:genid46"
@@ -1457,32 +1417,7 @@
     "@id" : "_:genid71"
   }, {
     "@id" : "_:genid72"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Topic Label"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Topic Status"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Topic Type"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Viewpoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  }, {
     "@id" : "_:genid73"
   }, {
     "@id" : "_:genid74"
@@ -1492,7 +1427,48 @@
     "@id" : "_:genid76"
   }, {
     "@id" : "_:genid77"
-  }, {
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Label of the topic, such as Electrical, Architecture, Structural, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Topic Label"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Status of the topic such as Open, In Progress, Closed, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Topic Status"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of the topic such as Comment, Issue, Request, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Topic Type"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The viewpoint from which the BIM model is being viewed in the modeling tool."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Viewpoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid78"
   }, {
     "@id" : "_:genid79"
@@ -1508,10 +1484,24 @@
     "@id" : "_:genid84"
   }, {
     "@id" : "_:genid85"
+  }, {
+    "@id" : "_:genid86"
+  }, {
+    "@id" : "_:genid87"
+  }, {
+    "@id" : "_:genid88"
+  }, {
+    "@id" : "_:genid89"
+  }, {
+    "@id" : "_:genid90"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The user to whom this topic is assigned to. Recommended to be in email format."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "assigned to"
   } ],
@@ -1521,24 +1511,40 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the camera direction of the viewpoint."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "camera direction"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the camera up vector."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "camera up vector"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the camera viewpoint direction."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "camera view point"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#comment",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Large description of the comment."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "comment"
   } ],
@@ -1548,6 +1554,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the creator of the entity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "creation author"
   } ],
@@ -1557,6 +1567,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the creation date of the entity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "creation date"
   } ],
@@ -1566,6 +1580,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Provides a description of the topic."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "description"
   } ],
@@ -1575,6 +1593,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date until when the topics issue needs to be resolved."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "due date"
   } ],
@@ -1584,6 +1606,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Camera’s field of view angle in degrees."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "field of view"
   } ],
@@ -1593,54 +1619,90 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Explicit property to relate a topic to an specific part of the BIM Model."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has bim snippet"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a viewpoint with a bitmap element."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has bitmap"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a viewpoint with the camera being used."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has camera"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a viewpoint with a clipping plane used to define a subsection in the building model."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has clipping plane"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic with a comment."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has comment"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Related a viewpoint with the building elements it is conformed."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates a direction given by a 3D world coordinate."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has direction"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a topic to extra document references, such as additional payloads, or links."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has document reference"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link a topic with internal or external files such as BIM models, videos, images, text, etc."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has file"
   } ]
@@ -1653,60 +1715,100 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a viewpoint with a line being used to add markups in 3D."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has line"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the location of the bitmap, specifically the center of the bitmap in 3D world coordinates."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has location"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates to an specific point in 3D world coordinates."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has point"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "External references that help complemente the topic in discussion."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has reference link"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic with its stage."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has stage"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic with its label."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has topic label"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic with its status."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has topic status"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic with its type."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has topic type"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a comment with a viewpoint."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has viewpoint"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Attribute to uniquely identify the topics, comments and viewpoints."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "identifier"
   } ],
@@ -1716,6 +1818,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#index",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number to maintain the order of the topics."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "index"
   } ],
@@ -1725,6 +1831,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates who modified the entity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "modified author"
   } ],
@@ -1734,6 +1844,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the last time the entity was modified."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "modified date"
   } ],
@@ -1743,12 +1857,20 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the normal direction of the bitmap."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "normal vector"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#priority",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Topic priority."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "priority"
   } ],
@@ -1756,35 +1878,97 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#reference",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "reference"
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic to a building."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to building"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a viewpoint to a comment over a topic."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "related to comment"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic to an element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to element"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic to a project."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "related to project"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic to a space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to space"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic to a storey."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to storey"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic to another topic."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "related to topic"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a topic to a zone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to zone"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Filename of the snapshot taken under a viewpoint."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "snapshot name"
   } ],
@@ -1792,8 +1976,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier of the renovation project task."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "task id"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#title",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Title of the topic."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "title"
   } ],
@@ -1803,12 +2002,20 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the up direction of the bitmap."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "up vector"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Scaling from view to world."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "view to world scale"
   } ],
@@ -1818,6 +2025,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Name of the viewpoint."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "viewpoint name"
   } ],
@@ -1827,6 +2038,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "X component of a 3D coordinate."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "x coordinate"
   } ],
@@ -1836,6 +2051,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Y component of a 3D coordinate."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "y coordinate"
   } ],
@@ -1845,6 +2064,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Z component of a 3D coordinate."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "z coordinate"
   } ],
@@ -1852,57 +2075,58 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "See definition in http://bimerr.iot.linkeddata.es/def/building#Apartment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Apartment"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "See definition in http://bimerr.iot.linkeddata.es/def/building#Building"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Building"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "See definition in http://bimerr.iot.linkeddata.es/def/building#Element"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Element"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid86"
-  }, {
-    "@id" : "_:genid87"
-  }, {
-    "@id" : "_:genid88"
-  }, {
-    "@id" : "_:genid89"
-  }, {
-    "@id" : "_:genid90"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#autoringToolId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "autoring tool id"
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "See definition in http://bimerr.iot.linkeddata.es/def/building#Space"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Space"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#colorDisplay",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "color display"
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "See definition in http://bimerr.iot.linkeddata.es/def/building#Storey"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ifc identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#originatingSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "originating system"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@language" : "en",
+    "@value" : "Storey"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#Format",
@@ -1915,37 +2139,16 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Information Object"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid91"
-  }, {
-    "@id" : "_:genid92"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has extension"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Project"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid93"
-  }, {
-    "@id" : "_:genid94"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",

@@ -11,7 +11,7 @@
         <dc:creator>María Poveda-Villalón</dc:creator>
         <dc:creator>Serge Chávez-Feria</dc:creator>
         <dc:title>Annotations Ontology</dc:title>
-        <owl:versionInfo>0.0.2</owl:versionInfo>
+        <owl:versionInfo>0.0.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -58,6 +58,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection">
+        <rdfs:comment xml:lang="en">Indicates the camera direction of the viewpoint.</rdfs:comment>
         <rdfs:label>camera direction</rdfs:label>
     </owl:ObjectProperty>
     
@@ -67,6 +68,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector">
+        <rdfs:comment xml:lang="en">Indicates the camera up vector.</rdfs:comment>
         <rdfs:label>camera up vector</rdfs:label>
     </owl:ObjectProperty>
     
@@ -76,6 +78,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint">
+        <rdfs:comment xml:lang="en">Indicates the camera viewpoint direction.</rdfs:comment>
         <rdfs:label>camera view point</rdfs:label>
     </owl:ObjectProperty>
     
@@ -85,6 +88,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet">
+        <rdfs:comment xml:lang="en">Explicit property to relate a topic to an specific part of the BIM Model.</rdfs:comment>
         <rdfs:label>has bim snippet</rdfs:label>
     </owl:ObjectProperty>
     
@@ -94,6 +98,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap">
+        <rdfs:comment xml:lang="en">Relates a viewpoint with a bitmap element.</rdfs:comment>
         <rdfs:label>has bitmap</rdfs:label>
     </owl:ObjectProperty>
     
@@ -103,6 +108,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera">
+        <rdfs:comment xml:lang="en">Relates a viewpoint with the camera being used.</rdfs:comment>
         <rdfs:label>has camera</rdfs:label>
     </owl:ObjectProperty>
     
@@ -112,6 +118,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane">
+        <rdfs:comment xml:lang="en">Relates a viewpoint with a clipping plane used to define a subsection in the building model.</rdfs:comment>
         <rdfs:label>has clipping plane</rdfs:label>
     </owl:ObjectProperty>
     
@@ -121,6 +128,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment">
+        <rdfs:comment xml:lang="en">Relates a topic with a comment.</rdfs:comment>
         <rdfs:label>has comment</rdfs:label>
     </owl:ObjectProperty>
     
@@ -130,6 +138,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent">
+        <rdfs:comment xml:lang="en">Related a viewpoint with the building elements it is conformed.</rdfs:comment>
         <rdfs:label>has component</rdfs:label>
     </owl:ObjectProperty>
     
@@ -139,6 +148,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection">
+        <rdfs:comment xml:lang="en">Indicates a direction given by a 3D world coordinate.</rdfs:comment>
         <rdfs:label>has direction</rdfs:label>
     </owl:ObjectProperty>
     
@@ -148,6 +158,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference">
+        <rdfs:comment xml:lang="en">Links a topic to extra document references, such as additional payloads, or links.</rdfs:comment>
         <rdfs:label>has document reference</rdfs:label>
     </owl:ObjectProperty>
     
@@ -157,6 +168,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile">
+        <rdfs:comment xml:lang="en">Link a topic with internal or external files such as BIM models, videos, images, text, etc.</rdfs:comment>
         <rdfs:label>has file</rdfs:label>
     </owl:ObjectProperty>
     
@@ -175,6 +187,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine">
+        <rdfs:comment xml:lang="en">Connects a viewpoint with a line being used to add markups in 3D.</rdfs:comment>
         <rdfs:label>has line</rdfs:label>
     </owl:ObjectProperty>
     
@@ -184,6 +197,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation">
+        <rdfs:comment xml:lang="en">Indicates the location of the bitmap, specifically the center of the bitmap in 3D world coordinates.</rdfs:comment>
         <rdfs:label>has location</rdfs:label>
     </owl:ObjectProperty>
     
@@ -193,6 +207,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint">
+        <rdfs:comment xml:lang="en">Relates to an specific point in 3D world coordinates.</rdfs:comment>
         <rdfs:label>has point</rdfs:label>
     </owl:ObjectProperty>
     
@@ -202,6 +217,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink">
+        <rdfs:comment xml:lang="en">External references that help complemente the topic in discussion.</rdfs:comment>
         <rdfs:label>has reference link</rdfs:label>
     </owl:ObjectProperty>
     
@@ -211,6 +227,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage">
+        <rdfs:comment xml:lang="en">Relates a topic with its stage.</rdfs:comment>
         <rdfs:label>has stage</rdfs:label>
     </owl:ObjectProperty>
     
@@ -220,6 +237,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel">
+        <rdfs:comment xml:lang="en">Relates a topic with its label.</rdfs:comment>
         <rdfs:label>has topic label</rdfs:label>
     </owl:ObjectProperty>
     
@@ -229,6 +247,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus">
+        <rdfs:comment xml:lang="en">Relates a topic with its status.</rdfs:comment>
         <rdfs:label>has topic status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -238,6 +257,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType">
+        <rdfs:comment xml:lang="en">Relates a topic with its type.</rdfs:comment>
         <rdfs:label>has topic type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -247,6 +267,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint">
+        <rdfs:comment xml:lang="en">Relates a comment with a viewpoint.</rdfs:comment>
         <rdfs:label>has viewpoint</rdfs:label>
     </owl:ObjectProperty>
     
@@ -256,7 +277,18 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector">
+        <rdfs:comment xml:lang="en">Indicates the normal direction of the bitmap.</rdfs:comment>
         <rdfs:label>normal vector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding">
+        <rdfs:comment xml:lang="en">Relates a topic to a building.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to building</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -265,7 +297,18 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment">
+        <rdfs:comment xml:lang="en">Relates a viewpoint to a comment over a topic.</rdfs:comment>
         <rdfs:label>related to comment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement">
+        <rdfs:comment xml:lang="en">Relates a topic to an element.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to element</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -274,7 +317,28 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject">
+        <rdfs:comment xml:lang="en">Relates a topic to a project.</rdfs:comment>
         <rdfs:label>related to project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace">
+        <rdfs:comment xml:lang="en">Relates a topic to a space.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey">
+        <rdfs:comment xml:lang="en">Relates a topic to a storey.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to storey</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -283,7 +347,18 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic">
+        <rdfs:comment xml:lang="en">Relates a topic to another topic.</rdfs:comment>
         <rdfs:label>related to topic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone">
+        <rdfs:comment xml:lang="en">Relates a topic to a zone.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to zone</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -292,16 +367,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector">
+        <rdfs:comment xml:lang="en">Indicates the up direction of the bitmap.</rdfs:comment>
         <rdfs:label>up vector</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension -->
-
-
-    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension">
-        <rdfs:label>has extension</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -323,6 +390,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The user to whom this topic is assigned to. Recommended to be in email format.</rdfs:comment>
         <rdfs:label>assigned to</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -333,6 +401,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#comment">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Large description of the comment.</rdfs:comment>
         <rdfs:label>comment</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -343,6 +412,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates the creator of the entity.</rdfs:comment>
         <rdfs:label>creation author</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -353,6 +423,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Indicates the creation date of the entity.</rdfs:comment>
         <rdfs:label>creation date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -363,6 +434,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#description">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Provides a description of the topic.</rdfs:comment>
         <rdfs:label>description</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -373,6 +445,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date until when the topics issue needs to be resolved.</rdfs:comment>
         <rdfs:label>due date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -383,6 +456,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Camera’s field of view angle in degrees.</rdfs:comment>
         <rdfs:label>field of view</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -393,6 +467,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Attribute to uniquely identify the topics, comments and viewpoints.</rdfs:comment>
         <rdfs:label>identifier</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -403,6 +478,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#index">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number to maintain the order of the topics.</rdfs:comment>
         <rdfs:label>index</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -413,6 +489,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates who modified the entity.</rdfs:comment>
         <rdfs:label>modified author</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -423,6 +500,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Indicates the last time the entity was modified.</rdfs:comment>
         <rdfs:label>modified date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -433,17 +511,8 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#priority">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Topic priority.</rdfs:comment>
         <rdfs:label>priority</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/annotation-objects#reference -->
-
-
-    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#reference">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>reference</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -453,7 +522,18 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Filename of the snapshot taken under a viewpoint.</rdfs:comment>
         <rdfs:label>snapshot name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId">
+        <rdfs:comment xml:lang="en">Identifier of the renovation project task.</rdfs:comment>
+        <rdfs:label xml:lang="en">task id</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -463,6 +543,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#title">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Title of the topic.</rdfs:comment>
         <rdfs:label>title</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -473,6 +554,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Scaling from view to world.</rdfs:comment>
         <rdfs:label>view to world scale</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -483,6 +565,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the viewpoint.</rdfs:comment>
         <rdfs:label>viewpoint name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -493,6 +576,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">X component of a 3D coordinate.</rdfs:comment>
         <rdfs:label>x coordinate</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -503,6 +587,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Y component of a 3D coordinate.</rdfs:comment>
         <rdfs:label>y coordinate</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -513,57 +598,8 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Z component of a 3D coordinate.</rdfs:comment>
         <rdfs:label>z coordinate</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#autoringToolId -->
-
-
-    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#autoringToolId">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>autoring tool id</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#colorDisplay -->
-
-
-    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#colorDisplay">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>color display</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier -->
-
-
-    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>ifc identifier</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#originatingSystem -->
-
-
-    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#originatingSystem">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>originating system</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier -->
-
-
-    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>identifier</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -640,20 +676,7 @@
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#reference"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#reference"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A list of bitmaps can be used to add more information, for example, text in the visualization.</rdfs:comment>
         <rdfs:label>Bitmap</rdfs:label>
     </owl:Class>
     
@@ -705,6 +728,7 @@
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents the type of camera being used in the viewpoint.</rdfs:comment>
         <rdfs:label>Camera</rdfs:label>
     </owl:Class>
     
@@ -742,6 +766,7 @@
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Clipping Planes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</rdfs:comment>
         <rdfs:label>Clipping Plane</rdfs:label>
     </owl:Class>
     
@@ -834,6 +859,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Their purpose is to record discussion between different parties related to the topic.</rdfs:comment>
         <rdfs:label>Comment</rdfs:label>
     </owl:Class>
     
@@ -885,6 +911,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents a coordinate in 3 dimensions.</rdfs:comment>
         <rdfs:label>Coordinate3 D</rdfs:label>
     </owl:Class>
     
@@ -908,6 +935,7 @@
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</rdfs:comment>
         <rdfs:label>Line</rdfs:label>
     </owl:Class>
     
@@ -932,6 +960,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents an orthogonal camera being used in the viewpoint.</rdfs:comment>
         <rdfs:label>Orthogonal Camera</rdfs:label>
     </owl:Class>
     
@@ -956,6 +985,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents an perspective camera being used in the viewpoint.</rdfs:comment>
         <rdfs:label>Perspective Camera</rdfs:label>
     </owl:Class>
     
@@ -965,6 +995,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage">
+        <rdfs:comment xml:lang="en">Stage of the topic such as Planning, Construction, etc.</rdfs:comment>
         <rdfs:label>Stage</rdfs:label>
     </owl:Class>
     
@@ -974,6 +1005,42 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Storey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Apartment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet"/>
@@ -1058,6 +1125,12 @@
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1165,6 +1238,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Topic contains reference information of the topic.</rdfs:comment>
         <rdfs:label>Topic</rdfs:label>
     </owl:Class>
     
@@ -1174,6 +1248,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">
+        <rdfs:comment xml:lang="en">Label of the topic, such as Electrical, Architecture, Structural, etc.</rdfs:comment>
         <rdfs:label>Topic Label</rdfs:label>
     </owl:Class>
     
@@ -1183,6 +1258,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus">
+        <rdfs:comment xml:lang="en">Status of the topic such as Open, In Progress, Closed, etc.</rdfs:comment>
         <rdfs:label>Topic Status</rdfs:label>
     </owl:Class>
     
@@ -1192,6 +1268,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType">
+        <rdfs:comment xml:lang="en">Type of the topic such as Comment, Issue, Request, etc.</rdfs:comment>
         <rdfs:label>Topic Type</rdfs:label>
     </owl:Class>
     
@@ -1287,7 +1364,28 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The viewpoint from which the BIM model is being viewed in the modeling tool.</rdfs:comment>
         <rdfs:label>Viewpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Apartment -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Apartment">
+        <rdfs:comment xml:lang="en">See definition in http://bimerr.iot.linkeddata.es/def/building#Apartment</rdfs:comment>
+        <rdfs:label xml:lang="en">Apartment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Building -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Building">
+        <rdfs:comment xml:lang="en">See definition in http://bimerr.iot.linkeddata.es/def/building#Building</rdfs:comment>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
     </owl:Class>
     
 
@@ -1296,42 +1394,28 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Element">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#autoringToolId"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#colorDisplay"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#originatingSystem"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">See definition in http://bimerr.iot.linkeddata.es/def/building#Element</rdfs:comment>
         <rdfs:label>Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Space -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Space">
+        <rdfs:comment xml:lang="en">See definition in http://bimerr.iot.linkeddata.es/def/building#Space</rdfs:comment>
+        <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Storey -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Storey">
+        <rdfs:comment xml:lang="en">See definition in http://bimerr.iot.linkeddata.es/def/building#Storey</rdfs:comment>
+        <rdfs:label xml:lang="en">Storey</rdfs:label>
     </owl:Class>
     
 
@@ -1349,20 +1433,6 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#Format"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#Format"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label>Information Object</rdfs:label>
     </owl:Class>
     
@@ -1372,20 +1442,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project</rdfs:comment>
         <rdfs:label>Project</rdfs:label>
     </owl:Class>
     
