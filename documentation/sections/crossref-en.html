@@ -29,15 +29,11 @@ This section provides details for each class and property defined by Annotations
       </li>
       <li>
          <a href="#Coordinate3D"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D">Coordinate3 D</a>
+            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D">Coordinate 3D</a>
       </li>
       <li>
          <a href="#http://bimerr.iot.linkeddata.es/def/building#Element"
             title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
-      </li>
-      <li>
-         <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#Format"
-            title="http://bimerr.iot.linkeddata.es/def/information-objects#Format">Format</a>
       </li>
       <li>
          <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
@@ -102,6 +98,14 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">See definition in http://bimerr.iot.linkeddata.es/def/building#Apartment</span>
       </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedToApartment"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToApartment">related to apartment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Bitmap">
       <h3>Bitmap<sup class="type-c" title="class">c</sup>
@@ -115,7 +119,17 @@ This section provides details for each class and property defined by Annotations
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+               title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information Object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasBitmap"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap">has bitmap</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://bimerr.iot.linkeddata.es/def/building#Building">
@@ -128,6 +142,14 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">See definition in http://bimerr.iot.linkeddata.es/def/building#Building</span>
       </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedToBuilding"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding">related to building</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Camera">
       <h3>Camera<sup class="type-c" title="class">c</sup>
@@ -150,6 +172,22 @@ This section provides details for each class and property defined by Annotations
                title="http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera">Perspective Camera</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#cameraDirection"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection">camera direction</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#cameraUpVector"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector">camera up vector</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#cameraViewPoint"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint">camera view point</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCamera"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera">has camera</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="ClippingPlane">
@@ -165,6 +203,12 @@ This section provides details for each class and property defined by Annotations
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasClippingPlane"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane">has clipping plane</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Comment">
@@ -180,10 +224,22 @@ This section provides details for each class and property defined by Annotations
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasViewpoint"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint">has viewpoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasComment"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment">has comment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Coordinate3D">
-      <h3>Coordinate3 D<sup class="type-c" title="class">c</sup>
+      <h3>Coordinate 3D<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -195,6 +251,18 @@ This section provides details for each class and property defined by Annotations
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#cameraDirection"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection">camera direction</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#cameraUpVector"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector">camera up vector</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#cameraViewPoint"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint">camera view point</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPoint"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint">has point</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://bimerr.iot.linkeddata.es/def/building#Element">
@@ -207,14 +275,16 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">See definition in http://bimerr.iot.linkeddata.es/def/building#Element</span>
       </div>
-   </div>
-   <div class="entity" id="http://bimerr.iot.linkeddata.es/def/information-objects#Format">
-      <h3>Format<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#Format</p>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasComponent"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent">has component</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToElement"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement">related to element</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">
       <h3>Information Object<sup class="type-c" title="class">c</sup>
@@ -223,6 +293,17 @@ This section provides details for each class and property defined by Annotations
       </h3>
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject</p>
+      <div class="comment">
+         <span class="markdown">See http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Bitmap"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap">Bitmap</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Line">
       <h3>Line<sup class="type-c" title="class">c</sup>
@@ -237,6 +318,18 @@ This section provides details for each class and property defined by Annotations
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasPoint"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint">has point</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasLine"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine">has line</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="OrthogonalCamera">
@@ -287,6 +380,14 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project</span>
       </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedToProject"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject">related to project</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://bimerr.iot.linkeddata.es/def/building#Space">
       <h3>Space<sup class="type-c" title="class">c</sup>
@@ -298,6 +399,14 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">See definition in http://bimerr.iot.linkeddata.es/def/building#Space</span>
       </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedToSpace"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace">related to space</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Stage">
       <h3>Stage<sup class="type-c" title="class">c</sup>
@@ -310,15 +419,11 @@ This section provides details for each class and property defined by Annotations
          <span class="markdown">Stage of the topic such as Planning, Construction, etc.</span>
       </div>
       <dl class="description">
-         <dt>has members</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#ConstructionEnd"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionEnd">construction end</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ConstructionStart"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionStart">construction start</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PreliminaryPlanningEnd"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd">preliminary planning end</a>
-            <sup class="type-ni" title="named individual">ni</sup>
+            <a href="#hasStage"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage">has stage</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -332,6 +437,14 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">See definition in http://bimerr.iot.linkeddata.es/def/building#Storey</span>
       </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedToStorey"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey">related to storey</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Topic">
       <h3>Topic<sup class="type-c" title="class">c</sup>
@@ -346,6 +459,40 @@ This section provides details for each class and property defined by Annotations
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasComment"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment">has comment</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasStage"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage">has stage</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTopicLabel"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel">has topic label</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTopicStatus"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus">has topic status</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTopicType"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType">has topic type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToApartment"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToApartment">related to apartment</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToBuilding"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding">related to building</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToElement"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToElement">related to element</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToProject"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject">related to project</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToSpace"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToSpace">related to space</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToStorey"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey">related to storey</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToTopic"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic">related to topic</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedToTopic"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic">related to topic</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="TopicLabel">
@@ -359,21 +506,11 @@ This section provides details for each class and property defined by Annotations
          <span class="markdown">Label of the topic, such as Electrical, Architecture, Structural, etc.</span>
       </div>
       <dl class="description">
-         <dt>has members</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#ArchitectureTopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel">architecture topic label</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ElectricalTopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel">electrical topic label</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MechanicalTopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel">mechanical topic label</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SpecificationsTopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#SpecificationsTopicLabel">specifications topic label</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#StructureTopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#StructureTopicLabel">structure topic label</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TechnologyTopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TechnologyTopicLabel">technology topic label</a>
-            <sup class="type-ni" title="named individual">ni</sup>
+            <a href="#hasTopicLabel"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel">has topic label</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -388,17 +525,11 @@ This section provides details for each class and property defined by Annotations
          <span class="markdown">Status of the topic such as Open, In Progress, Closed, etc.</span>
       </div>
       <dl class="description">
-         <dt>has members</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#ClosedTopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus">closed topic status</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#InProgressTopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#InProgressTopicStatus">in progress topic status</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#OpenTopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#OpenTopicStatus">open topic status</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ReOpenedTopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ReOpenedTopicStatus">re opened topic status</a>
-            <sup class="type-ni" title="named individual">ni</sup>
+            <a href="#hasTopicStatus"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus">has topic status</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -413,17 +544,11 @@ This section provides details for each class and property defined by Annotations
          <span class="markdown">Type of the topic such as Comment, Issue, Request, etc.</span>
       </div>
       <dl class="description">
-         <dt>has members</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#CommentTopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType">comment topic type</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#IssueTopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#IssueTopicType">issue topic type</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#RequestTopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#RequestTopicType">request topic type</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SolutionTopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#SolutionTopicType">solution topic type</a>
-            <sup class="type-ni" title="named individual">ni</sup>
+            <a href="#hasTopicType"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType">has topic type</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -440,6 +565,26 @@ This section provides details for each class and property defined by Annotations
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasBitmap"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap">has bitmap</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCamera"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera">has camera</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasClippingPlane"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane">has clipping plane</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasComponent"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent">has component</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLine"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine">has line</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasViewpoint"
+               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint">has viewpoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
 </div><div id="objectproperties">
@@ -494,10 +639,6 @@ This section provides details for each class and property defined by Annotations
             title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile">has file</a>
       </li>
       <li>
-         <a href="#hasFormat"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat">has format</a>
-      </li>
-      <li>
          <a href="#hasLine"
             title="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine">has line</a>
       </li>
@@ -538,12 +679,12 @@ This section provides details for each class and property defined by Annotations
             title="http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector">normal vector</a>
       </li>
       <li>
-         <a href="#relatedToBuilding"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding">related to building</a>
+         <a href="#relatedToApartment"
+            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToApartment">related to apartment</a>
       </li>
       <li>
-         <a href="#relatedToComment"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment">related to comment</a>
+         <a href="#relatedToBuilding"
+            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToBuilding">related to building</a>
       </li>
       <li>
          <a href="#relatedToElement"
@@ -566,10 +707,6 @@ This section provides details for each class and property defined by Annotations
             title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic">related to topic</a>
       </li>
       <li>
-         <a href="#relatedToZone"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone">related to zone</a>
-      </li>
-      <li>
          <a href="#upVector"
             title="http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector">up vector</a>
       </li>
@@ -584,6 +721,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Indicates the camera direction of the viewpoint.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Camera"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera">Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Coordinate3D"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D">Coordinate 3D</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="cameraUpVector">
       <h3>camera up vector<sup class="type-op" title="object property">op</sup>
@@ -595,6 +748,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Indicates the camera up vector.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Camera"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera">Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Coordinate3D"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D">Coordinate 3D</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="cameraViewPoint">
       <h3>camera view point<sup class="type-op" title="object property">op</sup>
@@ -605,6 +774,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint</p>
       <div class="comment">
          <span class="markdown">Indicates the camera viewpoint direction.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Camera"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera">Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Coordinate3D"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D">Coordinate 3D</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="hasBimSnippet">
@@ -628,6 +813,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a viewpoint with a bitmap element.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Bitmap"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap">Bitmap</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasCamera">
       <h3>has camera<sup class="type-op" title="object property">op</sup>
@@ -638,6 +839,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera</p>
       <div class="comment">
          <span class="markdown">Relates a viewpoint with the camera being used.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Camera"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera">Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="hasClippingPlane">
@@ -650,6 +867,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a viewpoint with a clipping plane used to define a subsection in the building model.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ClippingPlane"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane">Clipping Plane</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasComment">
       <h3>has comment<sup class="type-op" title="object property">op</sup>
@@ -661,6 +894,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic with a comment.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Comment"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasComponent">
       <h3>has component<sup class="type-op" title="object property">op</sup>
@@ -671,6 +920,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent</p>
       <div class="comment">
          <span class="markdown">Related a viewpoint with the building elements it is conformed.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#Element"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="hasDirection">
@@ -706,14 +971,6 @@ This section provides details for each class and property defined by Annotations
          <span class="markdown">Link a topic with internal or external files such as BIM models, videos, images, text, etc.</span>
       </div>
    </div>
-   <div class="entity" id="hasFormat">
-      <h3>has format<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat</p>
-   </div>
    <div class="entity" id="hasLine">
       <h3>has line<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -723,6 +980,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine</p>
       <div class="comment">
          <span class="markdown">Connects a viewpoint with a line being used to add markups in 3D.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Line"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Line">Line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="hasLocation">
@@ -746,6 +1019,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates to an specific point in 3D world coordinates.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Line"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Line">Line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Coordinate3D"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D">Coordinate 3D</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasReferenceLink">
       <h3>has reference link<sup class="type-op" title="object property">op</sup>
@@ -768,6 +1057,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic with its stage.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Stage"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage">Stage</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasTopicLabel">
       <h3>has topic label<sup class="type-op" title="object property">op</sup>
@@ -778,6 +1083,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel</p>
       <div class="comment">
          <span class="markdown">Relates a topic with its label.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TopicLabel"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">Topic Label</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="hasTopicStatus">
@@ -790,6 +1111,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic with its status.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TopicStatus"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus">Topic Status</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasTopicType">
       <h3>has topic type<sup class="type-op" title="object property">op</sup>
@@ -801,6 +1138,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic with its type.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TopicType"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType">Topic Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasViewpoint">
       <h3>has viewpoint<sup class="type-op" title="object property">op</sup>
@@ -811,6 +1164,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint</p>
       <div class="comment">
          <span class="markdown">Relates a comment with a viewpoint.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Viewpoint"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="normalVector">
@@ -824,6 +1193,33 @@ This section provides details for each class and property defined by Annotations
          <span class="markdown">Indicates the normal direction of the bitmap.</span>
       </div>
    </div>
+   <div class="entity" id="relatedToApartment">
+      <h3>related to apartment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToApartment</p>
+      <div class="comment">
+         <span class="markdown">Relates a topic with an apartment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#Apartment"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Apartment">Apartment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="relatedToBuilding">
       <h3>related to building<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -834,16 +1230,21 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic to a building.</span>
       </div>
-   </div>
-   <div class="entity" id="relatedToComment">
-      <h3>related to comment<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment</p>
-      <div class="comment">
-         <span class="markdown">Relates a viewpoint to a comment over a topic.</span>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#Building"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Building">Building</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="relatedToElement">
@@ -856,6 +1257,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic to an element.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#Element"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="relatedToProject">
       <h3>related to project<sup class="type-op" title="object property">op</sup>
@@ -866,6 +1283,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject</p>
       <div class="comment">
          <span class="markdown">Relates a topic to a project.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"
+                  title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project">Project</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="relatedToSpace">
@@ -878,6 +1311,22 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic to a space.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#Space"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="relatedToStorey">
       <h3>related to storey<sup class="type-op" title="object property">op</sup>
@@ -888,6 +1337,22 @@ This section provides details for each class and property defined by Annotations
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToStorey</p>
       <div class="comment">
          <span class="markdown">Relates a topic to a storey.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#Storey"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Storey">Storey</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="relatedToTopic">
@@ -900,16 +1365,21 @@ This section provides details for each class and property defined by Annotations
       <div class="comment">
          <span class="markdown">Relates a topic to another topic.</span>
       </div>
-   </div>
-   <div class="entity" id="relatedToZone">
-      <h3>related to zone<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToZone</p>
-      <div class="comment">
-         <span class="markdown">Relates a topic to a zone.</span>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Topic"
+                  title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="upVector">
@@ -977,10 +1447,6 @@ This section provides details for each class and property defined by Annotations
       <li>
          <a href="#snapshotName"
             title="http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName">snapshot name</a>
-      </li>
-      <li>
-         <a href="#taskId"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId">task id</a>
       </li>
       <li>
          <a href="#title"
@@ -1254,17 +1720,6 @@ This section provides details for each class and property defined by Annotations
          </dl>
       </div>
    </div>
-   <div class="entity" id="taskId">
-      <h3>task id<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId</p>
-      <div class="comment">
-         <span class="markdown">Identifier of the renovation project task.</span>
-      </div>
-   </div>
    <div class="entity" id="title">
       <h3>title<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1378,384 +1833,6 @@ This section provides details for each class and property defined by Annotations
             </dd>
          </dl>
       </div>
-   </div>
-</div><div id="namedindividuals">
-   <h3 id="namedindividuals" class="list">Named Individuals</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#ArchitectureTopicLabel"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel">
-            <span>architecture topic label</span>
-         </a>
-      </li>
-      <li>
-         <a href="#ClosedTopicStatus"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus">
-            <span>closed topic status</span>
-         </a>
-      </li>
-      <li>
-         <a href="#CommentTopicType"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType">
-            <span>comment topic type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#ConstructionEnd"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionEnd">
-            <span>construction end</span>
-         </a>
-      </li>
-      <li>
-         <a href="#ConstructionStart"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionStart">
-            <span>construction start</span>
-         </a>
-      </li>
-      <li>
-         <a href="#ElectricalTopicLabel"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel">
-            <span>electrical topic label</span>
-         </a>
-      </li>
-      <li>
-         <a href="#InProgressTopicStatus"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#InProgressTopicStatus">
-            <span>in progress topic status</span>
-         </a>
-      </li>
-      <li>
-         <a href="#IssueTopicType"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#IssueTopicType">
-            <span>issue topic type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#MechanicalTopicLabel"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel">
-            <span>mechanical topic label</span>
-         </a>
-      </li>
-      <li>
-         <a href="#OpenTopicStatus"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#OpenTopicStatus">
-            <span>open topic status</span>
-         </a>
-      </li>
-      <li>
-         <a href="#PreliminaryPlanningEnd"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd">
-            <span>preliminary planning end</span>
-         </a>
-      </li>
-      <li>
-         <a href="#ReOpenedTopicStatus"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#ReOpenedTopicStatus">
-            <span>re opened topic status</span>
-         </a>
-      </li>
-      <li>
-         <a href="#RequestTopicType"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#RequestTopicType">
-            <span>request topic type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#SolutionTopicType"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#SolutionTopicType">
-            <span>solution topic type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#SpecificationsTopicLabel"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#SpecificationsTopicLabel">
-            <span>specifications topic label</span>
-         </a>
-      </li>
-      <li>
-         <a href="#StructureTopicLabel"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#StructureTopicLabel">
-            <span>structure topic label</span>
-         </a>
-      </li>
-      <li>
-         <a href="#TechnologyTopicLabel"
-            title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TechnologyTopicLabel">
-            <span>technology topic label</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="ArchitectureTopicLabel">
-      <h3>architecture topic label<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">Topic Label</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ClosedTopicStatus">
-      <h3>closed topic status<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus">Topic Status</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="CommentTopicType">
-      <h3>comment topic type<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType">Topic Type</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ConstructionEnd">
-      <h3>construction end<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionEnd</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#Stage"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage">Stage</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ConstructionStart">
-      <h3>construction start<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionStart</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#Stage"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage">Stage</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ElectricalTopicLabel">
-      <h3>electrical topic label<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">Topic Label</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="InProgressTopicStatus">
-      <h3>in progress topic status<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#InProgressTopicStatus</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus">Topic Status</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IssueTopicType">
-      <h3>issue topic type<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#IssueTopicType</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType">Topic Type</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="MechanicalTopicLabel">
-      <h3>mechanical topic label<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">Topic Label</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="OpenTopicStatus">
-      <h3>open topic status<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#OpenTopicStatus</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus">Topic Status</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PreliminaryPlanningEnd">
-      <h3>preliminary planning end<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#Stage"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage">Stage</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ReOpenedTopicStatus">
-      <h3>re opened topic status<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#ReOpenedTopicStatus</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicStatus"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus">Topic Status</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="RequestTopicType">
-      <h3>request topic type<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#RequestTopicType</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType">Topic Type</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SolutionTopicType">
-      <h3>solution topic type<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#SolutionTopicType</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicType"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType">Topic Type</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SpecificationsTopicLabel">
-      <h3>specifications topic label<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#SpecificationsTopicLabel</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">Topic Label</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="StructureTopicLabel">
-      <h3>structure topic label<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#StructureTopicLabel</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">Topic Label</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="TechnologyTopicLabel">
-      <h3>technology topic label<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/annotation-objects#TechnologyTopicLabel</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#TopicLabel"
-               title="http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel">Topic Label</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
