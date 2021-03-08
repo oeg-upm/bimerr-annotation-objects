@@ -294,12 +294,12 @@
 }, {
   "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ifcIdentifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#stage"
   } ]
 }, {
   "@id" : "_:genid38",
@@ -319,7 +319,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ifcIdentifier"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -334,6 +334,16 @@
 }, {
   "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -345,7 +355,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasMarkup"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -561,6 +571,8 @@
     "@id" : "_:genid35"
   }, {
     "@id" : "_:genid36"
+  }, {
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo",
@@ -1036,7 +1048,7 @@
     "@value" : "Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid37"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space",
@@ -1050,7 +1062,7 @@
     "@value" : "Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid38"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject",
@@ -1064,7 +1076,7 @@
     "@value" : "Information Object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project",
@@ -1078,9 +1090,9 @@
     "@value" : "Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid40"
-  }, {
     "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid42"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/created",

@@ -469,6 +469,10 @@
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :priority ;
                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :stage ;
+                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
        rdfs:comment "Topic contains reference information of the topic."@en ;
        rdfs:label "Topic"@en .
