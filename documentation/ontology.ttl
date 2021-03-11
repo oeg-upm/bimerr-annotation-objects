@@ -57,39 +57,9 @@
             rdfs:label "has comment" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection
-:hasDirection rdf:type owl:ObjectProperty ;
-              rdfs:domain :Topic ;
-              rdfs:range :Direction ;
-              rdfs:comment "Represent a direction given by a 3D world coordinate."@en ;
-              rdfs:label "has direction" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasHeader
-:hasHeader rdf:type owl:ObjectProperty ;
-           rdfs:domain :Markup ;
-           rdfs:range :Header ;
-           rdfs:label "has header"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasMarkup
-:hasMarkup rdf:type owl:ObjectProperty ;
-           rdfs:domain <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> ;
-           rdfs:range :Markup ;
-           rdfs:label "has markup"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint
-:hasPoint rdf:type owl:ObjectProperty ;
-          rdfs:domain :Topic ;
-          rdfs:range :Point ;
-          rdfs:comment "Represents a specific point in 3D world coordinates."@en ;
-          rdfs:label "has point" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopic
 :hasTopic rdf:type owl:ObjectProperty ;
-          rdfs:domain :Markup ;
+          rdfs:domain <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> ;
           rdfs:range :Topic ;
           rdfs:label "has topic"@en .
 
@@ -119,7 +89,7 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedIFCFile
 :relatedIFCFile rdf:type owl:ObjectProperty ;
-                rdfs:domain :Header ;
+                rdfs:domain :Topic ;
                 rdfs:range <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
                 rdfs:label "related IFC file"@en .
 
@@ -301,14 +271,6 @@
 ###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment
 :Comment rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasDirection ;
-                           owl:allValuesFrom :Direction
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasPoint ;
-                           owl:allValuesFrom :Point
-                         ] ,
-                         [ rdf:type owl:Restriction ;
                            owl:onProperty :comment ;
                            owl:cardinality "1"^^xsd:nonNegativeInteger
                          ] ,
@@ -336,74 +298,26 @@
          rdfs:label "Comment"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Direction
-:Direction rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :xCoordinate ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :yCoordinate ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :zCoordinate ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ;
-           rdfs:label "Direction"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Header
-:Header rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :relatedIFCFile ;
-                          owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
-                        ] ;
-        rdfs:label "Header"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Markup
-:Markup rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasComment ;
-                          owl:minCardinality "1"^^xsd:nonNegativeInteger
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasHeader ;
-                          owl:cardinality "1"^^xsd:nonNegativeInteger
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasTopic ;
-                          owl:cardinality "1"^^xsd:nonNegativeInteger
-                        ] ;
-        rdfs:label "Markup"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Point
-:Point rdf:type owl:Class ;
-       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :xCoordinate ;
-                         owl:cardinality "1"^^xsd:nonNegativeInteger
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :yCoordinate ;
-                         owl:cardinality "1"^^xsd:nonNegativeInteger
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :zCoordinate ;
-                         owl:cardinality "1"^^xsd:nonNegativeInteger
-                       ] ;
-       rdfs:label "Point"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic
 :Topic rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasComment ;
+                         owl:allValuesFrom :Comment
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :relatedAudioFile ;
                          owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
                        ] ,
                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :relatedComponent ;
+                         owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/building#Element>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :relatedDocumentation ;
+                         owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :relatedIFCFile ;
                          owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
                        ] ,
                        [ rdf:type owl:Restriction ;
@@ -413,6 +327,10 @@
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :relatedVideoFile ;
                          owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :relatedSpace ;
+                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :creationAuthor ;
@@ -511,9 +429,8 @@
 ###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
 <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> rdf:type owl:Class ;
                                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :hasMarkup ;
-                                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                          owl:onClass :Markup
+                                                                                          owl:onProperty :hasTopic ;
+                                                                                          owl:allValuesFrom :Topic
                                                                                         ] ,
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty :identifier ;
