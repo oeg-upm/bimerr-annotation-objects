@@ -192,6 +192,14 @@ ao:label rdf:type owl:DatatypeProperty ;
          rdfs:label "label"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/annotation-objects#location
+ao:location rdf:type owl:DatatypeProperty ;
+            rdfs:domain io:InformationObject ;
+            rdfs:range xsd:anyURI ;
+            rdfs:comment "Location of the file."@en ;
+            rdfs:label "location"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor
 ao:modifiedAuthor rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:string ;
@@ -426,8 +434,8 @@ building:Space rdf:type owl:Class ;
 ###  http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject
 io:InformationObject rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty ao:identifier ;
-                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       owl:onProperty ao:location ;
+                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                      ] ;
                      rdfs:comment "See http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"@en ;
                      rdfs:label "Information Object"@en .

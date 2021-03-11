@@ -247,12 +247,12 @@
 }, {
   "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#location"
   } ]
 }, {
   "@id" : "_:genid33",
@@ -593,6 +593,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Location of the file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor",

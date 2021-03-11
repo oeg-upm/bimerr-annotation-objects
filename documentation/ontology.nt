@@ -167,6 +167,13 @@
 <http://bimerr.iot.linkeddata.es/def/annotation-objects#label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/annotation-objects#label> <http://www.w3.org/2000/01/rdf-schema#label> "label"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#location
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#location> <http://www.w3.org/2000/01/rdf-schema#comment> "Location of the file."@en .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
+# 
 # http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor
 <http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
@@ -392,8 +399,8 @@ _:genid31 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/20
 <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> .
-_:genid32 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#location> .
+_:genid32 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "See http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"@en .
 <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "Information Object"@en .
 # 
