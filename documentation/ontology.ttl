@@ -61,6 +61,7 @@
 :hasTopic rdf:type owl:ObjectProperty ;
           rdfs:domain <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> ;
           rdfs:range :Topic ;
+          rdfs:comment "\"Relates the project to topics/issues\""@en ;
           rdfs:label "has topic"@en .
 
 
@@ -68,6 +69,7 @@
 :relatedAudioFile rdf:type owl:ObjectProperty ;
                   rdfs:domain :Topic ;
                   rdfs:range <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+                  rdfs:comment "Relates to an audio file."@en ;
                   rdfs:label "related audio file"@en .
 
 
@@ -91,6 +93,7 @@
 :relatedIFCFile rdf:type owl:ObjectProperty ;
                 rdfs:domain :Topic ;
                 rdfs:range <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+                rdfs:comment "Relates to an IFC file."@en ;
                 rdfs:label "related IFC file"@en .
 
 
@@ -98,6 +101,7 @@
 :relatedImageFile rdf:type owl:ObjectProperty ;
                   rdfs:domain :Topic ;
                   rdfs:range <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+                  rdfs:comment "Relates to an image file."@en ;
                   rdfs:label "related image file"@en .
 
 
@@ -113,6 +117,7 @@
 :relatedVideoFile rdf:type owl:ObjectProperty ;
                   rdfs:domain :Topic ;
                   rdfs:range <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+                  rdfs:comment "Relates to a video file."@en ;
                   rdfs:label "related video file"@en .
 
 
@@ -175,6 +180,7 @@
 ###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ifcIdentifier
 :ifcIdentifier rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
+               rdfs:comment "Global ID of the space in the IFC file"@en ;
                rdfs:label "ifc identifier"@en .
 
 
@@ -182,6 +188,7 @@
 :label rdf:type owl:DatatypeProperty ;
        rdfs:domain :Topic ;
        rdfs:range xsd:string ;
+       rdfs:comment "Label of the topic: Architecture, Structure, Mechanical, Electrical, Specifications, Technology."@en ;
        rdfs:label "label"@en .
 
 
@@ -211,7 +218,7 @@
 :priority rdf:type owl:DatatypeProperty ;
           rdfs:domain :Topic ;
           rdfs:range xsd:integer ;
-          rdfs:comment "Topic priority."@en ;
+          rdfs:comment "Priority of the topic indicated by an integer number: 1, 2, 3, 4."@en ;
           rdfs:label "priority" .
 
 
@@ -219,6 +226,7 @@
 :stage rdf:type owl:DatatypeProperty ;
        rdfs:domain :Topic ;
        rdfs:range xsd:string ;
+       rdfs:comment "Stage of the project: Preliminary Planning End, Construction Start, Construction End."@en ;
        rdfs:label "stage"@en .
 
 
@@ -226,6 +234,7 @@
 :taskId rdf:type owl:DatatypeProperty ;
         rdfs:domain :Topic ;
         rdfs:range xsd:string ;
+        rdfs:comment "Relates the topic/issue to an specific task id."@en ;
         rdfs:label "task id"@en .
 
 
@@ -241,6 +250,7 @@
 :topicStatus rdf:type owl:DatatypeProperty ;
              rdfs:domain :Topic ;
              rdfs:range xsd:string ;
+             rdfs:comment "Status of the topic: Open, In Progress, Closed, ReOpened."@en ;
              rdfs:label "topic status"@en .
 
 
@@ -248,6 +258,7 @@
 :topicType rdf:type owl:DatatypeProperty ;
            rdfs:domain :Topic ;
            rdfs:range xsd:string ;
+           rdfs:comment "Comment, Issue, Request, Solution"@en ;
            rdfs:label "topic type"@en .
 
 
@@ -410,7 +421,7 @@
                                                                          owl:onProperty :ifcIdentifier ;
                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                        ] ;
-                                                       rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Element"@en ;
+                                                       rdfs:comment "An element is a generalization of all components that make up an AEC product."@en ;
                                                        rdfs:label "Element"@en .
 
 
@@ -420,7 +431,7 @@
                                                                        owl:onProperty :ifcIdentifier ;
                                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                      ] ;
-                                                     rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Space"@en ;
+                                                     rdfs:comment "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en ;
                                                      rdfs:label "Space"@en .
 
 
@@ -430,7 +441,7 @@
                                                                                               owl:onProperty :location ;
                                                                                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                                             ] ;
-                                                                            rdfs:comment "See http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"@en ;
+                                                                            rdfs:comment "Class that represents any type of file."@en ;
                                                                             rdfs:label "Information Object"@en .
 
 
@@ -444,7 +455,7 @@
                                                                                           owl:onProperty :identifier ;
                                                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                                         ] ;
-                                                                        rdfs:comment "See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"@en ;
+                                                                        rdfs:comment "A project is a temporary endeavor undertaken to achieve defined objectives."@en ;
                                                                         rdfs:label "Project"@en .
 
 

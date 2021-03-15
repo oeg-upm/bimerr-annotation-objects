@@ -106,6 +106,7 @@
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopic">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"/>
         <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
+        <rdfs:comment xml:lang="en">&quot;Relates the project to topics/issues&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">has topic</rdfs:label>
     </owl:ObjectProperty>
     
@@ -117,6 +118,7 @@
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedAudioFile">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"/>
+        <rdfs:comment xml:lang="en">Relates to an audio file.</rdfs:comment>
         <rdfs:label xml:lang="en">related audio file</rdfs:label>
     </owl:ObjectProperty>
     
@@ -152,6 +154,7 @@
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedIFCFile">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"/>
+        <rdfs:comment xml:lang="en">Relates to an IFC file.</rdfs:comment>
         <rdfs:label xml:lang="en">related IFC file</rdfs:label>
     </owl:ObjectProperty>
     
@@ -163,6 +166,7 @@
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedImageFile">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"/>
+        <rdfs:comment xml:lang="en">Relates to an image file.</rdfs:comment>
         <rdfs:label xml:lang="en">related image file</rdfs:label>
     </owl:ObjectProperty>
     
@@ -186,6 +190,7 @@
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedVideoFile">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"/>
+        <rdfs:comment xml:lang="en">Relates to a video file.</rdfs:comment>
         <rdfs:label xml:lang="en">related video file</rdfs:label>
     </owl:ObjectProperty>
     
@@ -288,6 +293,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#ifcIdentifier">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Global ID of the space in the IFC file</rdfs:comment>
         <rdfs:label xml:lang="en">ifc identifier</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -299,6 +305,7 @@
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#label">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Label of the topic: Architecture, Structure, Mechanical, Electrical, Specifications, Technology.</rdfs:comment>
         <rdfs:label xml:lang="en">label</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -344,7 +351,7 @@
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#priority">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Topic priority.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Priority of the topic indicated by an integer number: 1, 2, 3, 4.</rdfs:comment>
         <rdfs:label>priority</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -356,6 +363,7 @@
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#stage">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stage of the project: Preliminary Planning End, Construction Start, Construction End.</rdfs:comment>
         <rdfs:label xml:lang="en">stage</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -367,6 +375,7 @@
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Relates the topic/issue to an specific task id.</rdfs:comment>
         <rdfs:label xml:lang="en">task id</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -390,6 +399,7 @@
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#topicStatus">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Status of the topic: Open, In Progress, Closed, ReOpened.</rdfs:comment>
         <rdfs:label xml:lang="en">topic status</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -401,6 +411,7 @@
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/annotation-objects#topicType">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Comment, Issue, Request, Solution</rdfs:comment>
         <rdfs:label xml:lang="en">topic type</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -655,7 +666,7 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">See definition in http://bimerr.iot.linkeddata.es/def/building#Element</rdfs:comment>
+        <rdfs:comment xml:lang="en">An element is a generalization of all components that make up an AEC product.</rdfs:comment>
         <rdfs:label xml:lang="en">Element</rdfs:label>
     </owl:Class>
     
@@ -671,7 +682,7 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">See definition in http://bimerr.iot.linkeddata.es/def/building#Space</rdfs:comment>
+        <rdfs:comment xml:lang="en">A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.</rdfs:comment>
         <rdfs:label xml:lang="en">Space</rdfs:label>
     </owl:Class>
     
@@ -687,7 +698,7 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">See http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject</rdfs:comment>
+        <rdfs:comment xml:lang="en">Class that represents any type of file.</rdfs:comment>
         <rdfs:label xml:lang="en">Information Object</rdfs:label>
     </owl:Class>
     
@@ -709,7 +720,7 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project</rdfs:comment>
+        <rdfs:comment xml:lang="en">A project is a temporary endeavor undertaken to achieve defined objectives.</rdfs:comment>
         <rdfs:label xml:lang="en">Project</rdfs:label>
     </owl:Class>
 </rdf:RDF>

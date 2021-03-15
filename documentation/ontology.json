@@ -548,6 +548,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\"Relates the project to topics/issues\""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"
   } ],
@@ -574,6 +578,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#ifcIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Global ID of the space in the IFC file"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ifc identifier"
@@ -584,6 +592,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#label",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Label of the topic: Architecture, Structure, Mechanical, Electrical, Specifications, Technology."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -642,7 +654,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Topic priority."
+    "@value" : "Priority of the topic indicated by an integer number: 1, 2, 3, 4."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
@@ -656,6 +668,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedAudioFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates to an audio file."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -703,6 +719,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedIFCFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates to an IFC file."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -716,6 +736,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedImageFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates to an image file."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -746,6 +770,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedVideoFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates to a video file."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -759,6 +787,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#stage",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Stage of the project: Preliminary Planning End, Construction Start, Construction End."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -772,6 +804,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#taskId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates the topic/issue to an specific task id."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -801,6 +837,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#topicStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Status of the topic: Open, In Progress, Closed, ReOpened."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -814,6 +854,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#topicType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Comment, Issue, Request, Solution"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic"
   } ],
@@ -868,7 +912,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "See definition in http://bimerr.iot.linkeddata.es/def/building#Element"
+    "@value" : "An element is a generalization of all components that make up an AEC product."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -882,7 +926,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "See definition in http://bimerr.iot.linkeddata.es/def/building#Space"
+    "@value" : "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -896,7 +940,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "See http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+    "@value" : "Class that represents any type of file."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -910,7 +954,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"
+    "@value" : "A project is a temporary endeavor undertaken to achieve defined objectives."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

@@ -68,6 +68,7 @@ ao:hasComment rdf:type owl:ObjectProperty ;
 ao:hasTopic rdf:type owl:ObjectProperty ;
             rdfs:domain kpi:Project ;
             rdfs:range ao:Topic ;
+            rdfs:comment "\"Relates the project to topics/issues\""@en ;
             rdfs:label "has topic"@en .
 
 
@@ -75,6 +76,7 @@ ao:hasTopic rdf:type owl:ObjectProperty ;
 ao:relatedAudioFile rdf:type owl:ObjectProperty ;
                     rdfs:domain ao:Topic ;
                     rdfs:range io:InformationObject ;
+                    rdfs:comment "Relates to an audio file."@en ;
                     rdfs:label "related audio file"@en .
 
 
@@ -98,6 +100,7 @@ ao:relatedDocumentation rdf:type owl:ObjectProperty ;
 ao:relatedIFCFile rdf:type owl:ObjectProperty ;
                   rdfs:domain ao:Topic ;
                   rdfs:range io:InformationObject ;
+                  rdfs:comment "Relates to an IFC file."@en ;
                   rdfs:label "related IFC file"@en .
 
 
@@ -105,6 +108,7 @@ ao:relatedIFCFile rdf:type owl:ObjectProperty ;
 ao:relatedImageFile rdf:type owl:ObjectProperty ;
                     rdfs:domain ao:Topic ;
                     rdfs:range io:InformationObject ;
+                    rdfs:comment "Relates to an image file."@en ;
                     rdfs:label "related image file"@en .
 
 
@@ -120,6 +124,7 @@ ao:relatedSpace rdf:type owl:ObjectProperty ;
 ao:relatedVideoFile rdf:type owl:ObjectProperty ;
                     rdfs:domain ao:Topic ;
                     rdfs:range io:InformationObject ;
+                    rdfs:comment "Relates to a video file."@en ;
                     rdfs:label "related video file"@en .
 
 
@@ -182,6 +187,7 @@ ao:identifier rdf:type owl:DatatypeProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/annotation-objects#ifcIdentifier
 ao:ifcIdentifier rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
+                 rdfs:comment "Global ID of the space in the IFC file"@en ;
                  rdfs:label "ifc identifier"@en .
 
 
@@ -189,6 +195,7 @@ ao:ifcIdentifier rdf:type owl:DatatypeProperty ;
 ao:label rdf:type owl:DatatypeProperty ;
          rdfs:domain ao:Topic ;
          rdfs:range xsd:string ;
+         rdfs:comment "Label of the topic: Architecture, Structure, Mechanical, Electrical, Specifications, Technology."@en ;
          rdfs:label "label"@en .
 
 
@@ -218,7 +225,7 @@ ao:modifiedDate rdf:type owl:DatatypeProperty ;
 ao:priority rdf:type owl:DatatypeProperty ;
             rdfs:domain ao:Topic ;
             rdfs:range xsd:integer ;
-            rdfs:comment "Topic priority."@en ;
+            rdfs:comment "Priority of the topic indicated by an integer number: 1, 2, 3, 4."@en ;
             rdfs:label "priority" .
 
 
@@ -226,6 +233,7 @@ ao:priority rdf:type owl:DatatypeProperty ;
 ao:stage rdf:type owl:DatatypeProperty ;
          rdfs:domain ao:Topic ;
          rdfs:range xsd:string ;
+         rdfs:comment "Stage of the project: Preliminary Planning End, Construction Start, Construction End."@en ;
          rdfs:label "stage"@en .
 
 
@@ -233,6 +241,7 @@ ao:stage rdf:type owl:DatatypeProperty ;
 ao:taskId rdf:type owl:DatatypeProperty ;
           rdfs:domain ao:Topic ;
           rdfs:range xsd:string ;
+          rdfs:comment "Relates the topic/issue to an specific task id."@en ;
           rdfs:label "task id"@en .
 
 
@@ -248,6 +257,7 @@ ao:title rdf:type owl:DatatypeProperty ;
 ao:topicStatus rdf:type owl:DatatypeProperty ;
                rdfs:domain ao:Topic ;
                rdfs:range xsd:string ;
+               rdfs:comment "Status of the topic: Open, In Progress, Closed, ReOpened."@en ;
                rdfs:label "topic status"@en .
 
 
@@ -255,6 +265,7 @@ ao:topicStatus rdf:type owl:DatatypeProperty ;
 ao:topicType rdf:type owl:DatatypeProperty ;
              rdfs:domain ao:Topic ;
              rdfs:range xsd:string ;
+             rdfs:comment "Comment, Issue, Request, Solution"@en ;
              rdfs:label "topic type"@en .
 
 
@@ -417,7 +428,7 @@ building:Element rdf:type owl:Class ;
                                    owl:onProperty ao:ifcIdentifier ;
                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                  ] ;
-                 rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Element"@en ;
+                 rdfs:comment "An element is a generalization of all components that make up an AEC product."@en ;
                  rdfs:label "Element"@en .
 
 
@@ -427,7 +438,7 @@ building:Space rdf:type owl:Class ;
                                  owl:onProperty ao:ifcIdentifier ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ;
-               rdfs:comment "See definition in http://bimerr.iot.linkeddata.es/def/building#Space"@en ;
+               rdfs:comment "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en ;
                rdfs:label "Space"@en .
 
 
@@ -437,7 +448,7 @@ io:InformationObject rdf:type owl:Class ;
                                        owl:onProperty ao:location ;
                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                      ] ;
-                     rdfs:comment "See http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"@en ;
+                     rdfs:comment "Class that represents any type of file."@en ;
                      rdfs:label "Information Object"@en .
 
 
@@ -451,7 +462,7 @@ kpi:Project rdf:type owl:Class ;
                               owl:onProperty ao:identifier ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ;
-            rdfs:comment "See definition in: http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project"@en ;
+            rdfs:comment "A project is a temporary endeavor undertaken to achieve defined objectives."@en ;
             rdfs:label "Project"@en .
 
 
