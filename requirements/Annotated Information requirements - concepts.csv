@@ -1,0 +1,26 @@
+Concept,Other name,Description
+ProjectExtension,,Reference the extension.xsd to a project. The schema for this file is project.xsd
+Project,,The project the topic belongs to
+Markup,,Textual information about the topic. The schema for this file is markup.xsd
+Header,,Information about the IFC files relevant to this topic
+File,,Information node about a specific IFC file related to this topic
+FileAttributes,,Attributes of each File node
+Topic,,"Reference information of the topic (such as a problem in the design, described in BCF file)"
+BimSnippet,,"An additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids"
+DocumentReference,,Provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.
+RelatedTopic,,Relation between topics (Clash -> PfV -> Opening)
+Comment,,Comments to record discussion between different parties related to the topic
+Viewpoint,,Viewpoints related to one or more comments
+VisualizationInfo,,"Visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information."
+Components,,The components node contains a set of Component references
+ViewSetupHints,,"Information about the default visibility for elements of certain types (SpacesVisible, SpaceBoundariesVisible and OpeningsVisible) that should be applied if not stated otherwise"
+ComponentSelection,,The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint.
+ComponentVisibility,,The Visibility element states the components DefaultVisibility and lists all Exceptions that apply to specific components.
+ComponentColoring,,List of colors and the associated components that should be displayed with the specified color when displaying a viewpoint
+complexType Color,,Lists components that should be displayed with a specific color
+Component,,An individual Component
+Line,,Lines used to add markup in 3D
+ClippingPlane,,Define a subsection of a building model that is related to the topic
+Point,,3 dimensional point
+Direction,,
+Bitmap,,"A list of bitmaps can be used to add more information, for example, text in the visualization"
